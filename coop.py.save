@@ -1,0 +1,21 @@
+import logging
+import configparser
+import datetime
+from suntime import Sun, SunTimeException
+
+#config
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+#logging
+logging.basicConfig(filename=config['Settings']['LogFile'], level=config['Settings']['LogLevel'], format='%(asctime)s - %(levelname)s: %(message)s')
+
+#Suntimeconfig['Location']['Latitude']
+latitude = 
+sun = Sun(config['Location']['Latitude'], config['Location']['Longitude'])
+
+today_sr = sun.get_local_sunrise_time()
+print(today_sr)
+
+#This is where the magic happens
+logging.info('Coop started')

@@ -1,26 +1,35 @@
-
 import RPi.GPIO as GPIO #import the GPIO library
-import time
+#import time
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
+##GPIO settings
 TopSensor = 8
-BottomSensor =7
+BottomSensor = 7
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(TopSensor, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(BottomSensor, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-#name = "Ryan"
-#print("Hello " + name)
+##Define events and their actions
+def door_open(channel):
+	print("Door Opened")
+def door_closed(channel):
+	print("Door closed")
 
-while True:
-    if GPIO.input(TopSensor) and GPIO.input(BottomSensor) == False:
-       print("Door is open")
-       time.sleep(1)
-    elif GPIO.input(BottomSensor) and GPIO.input(TopSensor) == False:
-       print("Door is closed")
-       time.sleep(1)
-    else:
-       print("Door in between")
-       time.sleep(1)
+##Detect events
+GPIO.add_event_detect(TopSensor,GPIO.FALLING,callback=door_open,bouncetime=2000)
+GPIO.add_event_detect(BottomSensor,GPIO.FALLING,callback=door_closed,bouncetime=2000)
+
+##Check door status every second
+#while True:
+#    if GPIO.input(TopSensor) and GPIO.input(BottomSensor) == False:
+#       print("Door is open")
+#       time.sleep(1)
+#    elif GPIO.input(BottomSensor) and GPIO.input(TopSensor) == False:
+#       print("Door is closed")
+#       time.sleep(1)
+#    else:
+#       print("Door in between")
+#       time.sleep(1)
+
+Message = input("Press enter to quit\n\n")
 
 GPIO.cleanup()

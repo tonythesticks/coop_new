@@ -1,12 +1,12 @@
 import logging
 import configparser
-import datetime
+from datetime import datetime, timezone
 import RPi.GPIO as GPIO
 import time
-import pytz
+#import pytz
 from suntime import Sun, SunTimeException
 
-utc=pytz.UTC
+#utc=pytz.UTC
 
 #config
 config = configparser.ConfigParser()
@@ -30,13 +30,15 @@ BottomSensor = int(config['GPIO']['BottomSensor'])
 #This is where the magic happens
 logging.info('Coop started')
 
-print(datetime.datetime.utcnow())
+now = datetime.now(timezone.utc)
+
+print(now)
 print(sun.get_sunrise_time())
 
-if datetime.datetime.utcnow() > sun.get_local_sunrise_time().replace(tzinfo=utc):
-	print(day)
+if now > sun.get_local_sunrise_time():
+	print("day")
 else:
-	print(night)
+	print("night")
 #while True:
 #
 #
