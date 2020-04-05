@@ -1,1 +1,7 @@
 INFO:root:Test logging
+2020-04-05 11:59:58,004 - INFO: Test logging
+2020-04-05 12:00:33,815 - INFO: Test logging
+2020-04-05 12:00:38,839 - INFO: Test logging
+2020-04-05 12:00:42,562 - INFO: Test logging
+2020-04-05 12:00:43,176 - INFO: Test logging
+2020-04-05 12:00:43,733 - INFO: Test logging
