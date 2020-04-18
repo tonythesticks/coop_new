@@ -14,12 +14,10 @@ from datetime import datetime, timezone
 import RPi.GPIO as GPIO
 import time
 from suntime import Sun, SunTimeException
-#import statusled as statusled
-#import schedule
 
 #config
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('coop.ini')
 
 #logging
 logging.basicConfig(filename=config['Settings']['LogFile'], level=config['Settings']['LogLevel'], format='%(asctime)s - %(levelname)s: %(message)s')
@@ -28,7 +26,7 @@ logging.basicConfig(filename=config['Settings']['LogFile'], level=config['Settin
 sun = Sun(float(config['Location']['Latitude']), float(config['Location']['Longitude']))
 now = datetime.now(timezone.utc)
 
-doortime=10
+doortime = int(config['Door']['Doortime'])
 
 #GPIO
 GPIO.setmode(GPIO.BOARD)
@@ -44,6 +42,8 @@ StatusGreen = int(config['GPIO']['StatusGreen'])
 GPIO.setup(StatusGreen,GPIO.OUT)
 StatusRed = int(config['GPIO']['StatusRed'])
 GPIO.setup(StatusRed,GPIO.OUT)
+Light = int(config['GPIO']['Light'])
+GPIO.setup(Light,GPIO.OUT)
 
 def status_error():
 	GPIO.output(StatusGreen,GPIO.LOW)
@@ -74,32 +74,6 @@ def motor_stop():
 	GPIO.output(MotorUp,GPIO.LOW)
 	GPIO.output(MotorDown,GPIO.LOW)
 
-def open_door():
-	logging.info ("Door going up")
-	timestart = time.process_time_ns()
-	runtime = 0
-#	while GPIO.input(BottomSensor) and GPIO.input(TopSensor) == False:
-#		logging.info("Door is closed, opening")
-	while GPIO.input(TopSensor) == False and runtime<doortime:
-		motor_up()
-		runtime=time.process_time_ns()-timestart
-		print("runtime: ", runtime)
-		print("timestart: ", timestart)
-		print("doortime: ", doortime)
-		status_busy()
-	if GPIO.input(TopSensor) and GPIO.input(BottomSensor) == False:
-		logging.info("Door is open")
-		status_ok()
-		motor_stop()
-	if GPIO.input(TopSensor) == False and 10000 > runtime:
-		motor_stop()
-		logging.error("ERROR, opening door took too long")
-		status_error()
-#	else:
-#		logging.error("Door stuck")
-#		status_error()
-#		motor_stop()
-
 def close_door():
 	logging.info ("Door going down")
 	GPIO.output(MotorDown,GPIO.HIGH)
@@ -113,7 +87,6 @@ def close_door():
 	else:
 		logging.info("Door in between")
 
-
 def startup():
 	logging.info('Coop started')
 	logging.info("The UTC time is: %s", (now))
@@ -121,37 +94,54 @@ def startup():
 def door():
 	logging.info("Door will open at: %s UTC",(sun.get_sunrise_time()))
 	logging.info("Door will close at: %s UTC",(sun.get_sunset_time()))
-	if now > sun.get_sunrise_time() and now < sun.get_sunset_time():
+	count = 0
+	if now >= sun.get_sunrise_time() and now < sun.get_sunset_time():
 		logging.warning("It is day, opening door")
-		open_door()
+		GPIO.output(Light,GPIO.HIGH)
+		while GPIO.input(TopSensor) == False and count < doortime:
+			motor_up()
+			status_busy()
+			count = count + 1
+			logging.debug(count)
+			logging.debug("Door going up")
+			if GPIO.input(TopSensor) and GPIO.input(BottomSensor) == False:
+				logging.info("Door is open")
+				status_ok()
+				motor_stop()
+			if GPIO.input(TopSensor) == False and count == doortime:
+				motor_stop()
+				logging.error("ERROR, opening door took too long")
+				status_error()
 	else:
 		logging.warning("It is night, closing door")
-		close_door()
+		GPIO.output(Light,GPIO.LOW)
+		while GPIO.input(BottomSensor) == False and count < doortime:
+			motor_down()
+			status_busy()
+			count = count + 1
+			logging.debug(count)
+			logging.debug("Door going down")
+			if GPIO.input(BottomSensor) and GPIO.input(TopSensor) == False:
+				logging.info("Door is closed")
+				status_ok()
+				motor_stop()
+			if GPIO.input(BottomSensor) == False and count == doortime:
+				motor_stop()
+				logging.error("ERROR, closing door took too long")
+				status_error()
 
 def main_loop():
-    while True:
-        door()
-        time.sleep(60)
-
-#while True:
-#
-#
-#	if GPIO.input(TopSensor) and GPIO.input(BottomSensor) == False:
-#		logging.info("Door is open")
-#	elif GPIO.input(BottomSensor) and GPIO.input(TopSensor) == False:
-#		logging.info("Door is closed")
-#	else:
-#		logging.info("Door in between")
-
-#GPIO.cleanup()
+	while True:
+		door()
+		time.sleep(60)
 
 if __name__ == "__main__":
-    try:
-        startup()
-        main_loop()
-    except RuntimeError as error:
-        print(error.args[0])
-    except KeyboardInterrupt:
-        print("\nExiting application\n")
-        # exit the application
-        GPIO.cleanup()
+	try:
+		startup()
+		main_loop()
+	except RuntimeError as error:
+		print(error.args[0])
+	except KeyboardInterrupt:
+		print("\nExiting application\n")
+		# exit the applications
+		GPIO.cleanup()
