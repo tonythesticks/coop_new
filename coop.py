@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 import RPi.GPIO as GPIO
 import time
 from suntime import Sun, SunTimeException
+#import statusled as statusled
 #import schedule
 
 #config
@@ -77,22 +78,23 @@ def open_door():
 	logging.info ("Door going up")
 	timestart = time.process_time_ns()
 	runtime = 0
+#	while GPIO.input(BottomSensor) and GPIO.input(TopSensor) == False:
+#		logging.info("Door is closed, opening")
+	while GPIO.input(TopSensor) == False and runtime<doortime:
+		motor_up()
+		runtime=time.process_time_ns()-timestart
+		print("runtime: ", runtime)
+		print("timestart: ", timestart)
+		print("doortime: ", doortime)
+		status_busy()
 	if GPIO.input(TopSensor) and GPIO.input(BottomSensor) == False:
 		logging.info("Door is open")
 		status_ok()
 		motor_stop()
-	elif GPIO.input(BottomSensor) and GPIO.input(TopSensor) == False and runtime<doortime:
-		logging.info("Door is closed, opening")
-		while GPIO.input(TopSensor) == False and runtime<doortime:
-			motor_up()
-			runtime=time.process_time_ns()-timestart
-			print(runtime)
-			print(timestart)
-			print(doortime)
-		if 10 > runtime:
-			motor_stop()
-			logging.error("ERROOOOOR")
-			status_error()
+	if GPIO.input(TopSensor) == False and 10000 > runtime:
+		motor_stop()
+		logging.error("ERROR, opening door took too long")
+		status_error()
 #	else:
 #		logging.error("Door stuck")
 #		status_error()
