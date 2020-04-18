@@ -74,19 +74,6 @@ def motor_stop():
 	GPIO.output(MotorUp,GPIO.LOW)
 	GPIO.output(MotorDown,GPIO.LOW)
 
-def close_door():
-	logging.info ("Door going down")
-	GPIO.output(MotorDown,GPIO.HIGH)
-	GPIO.output(MotorUp,GPIO.LOW)
-	time.sleep(10)
-	GPIO.output(MotorDown,GPIO.LOW)
-	if GPIO.input(TopSensor) and GPIO.input(BottomSensor) == False:
-		logging.info("Door is open")
-	elif GPIO.input(BottomSensor) and GPIO.input(TopSensor) == False:
-		logging.info("Door is closed")
-	else:
-		logging.info("Door in between")
-
 def startup():
 	logging.info('Coop started')
 	logging.info("The UTC time is: %s", (now))
