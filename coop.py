@@ -25,7 +25,7 @@ logging.basicConfig(filename=config['Settings']['LogFile'], level=config['Settin
 #Suntime
 sun = Sun(float(config['Location']['Latitude']), float(config['Location']['Longitude']))
 now = datetime.now(timezone.utc)
-Offset = int(config['Door']['Offset'])
+offset = int(config['Door']['Offset'])
 doortime = int(config['Door']['Doortime'])
 
 #GPIO
@@ -80,7 +80,7 @@ def startup():
 
 def door():
 	logging.info("Door will open at: %s UTC",(sun.get_sunrise_time()))
-	logging.info("Door will close at: %s UTC",(sun.get_sunset_time()))
+	logging.info("Door will close at: %s UTC",(sun.get_sunset_time() + timedelta(minutes=(offset))))
 	count = 0
 	if now >= sun.get_sunrise_time() and now <= sun.get_sunrise_time() + timedelta(minutes=1):
 		logging.warning("It is day, opening door")
@@ -99,7 +99,7 @@ def door():
 #				motor_stop()
 #				logging.error("ERROR, opening door took too long")
 #				status_error()
-	if now >= sun.get_sunset_time() + timedelta(minutes=(Offset)) and now <= sun.get_sunset_time() + timedelta(minutes=(Offset)) +  timedelta(minutes=1):
+	if now >= sun.get_sunset_time() + timedelta(minutes=(offset)) and now <= sun.get_sunset_time() + timedelta(minutes=(offset)) +  timedelta(minutes=1):
 		logging.warning("It is night, closing door")
 		GPIO.output(Light,GPIO.LOW)
 #		while GPIO.input(BottomSensor) == False and count < doortime:
