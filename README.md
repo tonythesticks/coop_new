@@ -1,11 +1,44 @@
 # coop
 
-## The plan
-The plan is to build a Raspberry Pi powered automatic chicken coop that:
-- Turns on a light at dawn and opens the door
-- Closes the door at sunset and some time later turns off the light
-- Shows status via LED on outside
-- Can be manipulated via remote control
+## Installation
+Simply enter the following command in your terminal
 
-## So far
-So far I only got the sunrise and sunset times and a way to monitor if the coop door is open or closed. Motor is on its way and I'm wrestling the digital LED.
+```
+git clone https://github.com/53645714n/coop.git
+```
+
+Then, go to the directory:
+
+```
+cd coop
+```
+
+## Configuration
+Then, to edit the config file:
+
+```
+nano coop.ini
+```
+
+Edit at least your location, the rest *can* be the same. It can also be totally different, up to you. To save, type: ctrl + o, ctrl + m, ctrl + x.
+
+## Startup
+To start the script, enter:
+
+```
+python3 coop.py &
+```
+and view the logging:
+
+```
+tail -f coop.log
+```
+
+To stop executing the script type:
+
+```
+kill -9 PROCESS
+```
+
+Where PROCESS is the number the terminal returned afther startup.
+
