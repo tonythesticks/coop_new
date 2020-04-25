@@ -1,5 +1,7 @@
 # coop
 
+I created this program to automate my chicken coop by opening the door and turning on the light on the inside. Build instructions can be found in the wiki, together with more detailed instructions on how to setup.
+
 ## Installation
 Simply enter the following command in your terminal
 
