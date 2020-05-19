@@ -13,12 +13,9 @@ print('Today in Wageningen the sun rises at {} and sets at {}'.
       format(today_sr.strftime('%H:%M'), today_ss.strftime('%H:%M')))
 
 # On a special date in your machine's local time zone
-tomorrow = datetime.now() + timedelta(days = 1)
-tomorrow_sr = sun.get_local_sunrise_time(tomorrow)
-tomorrow_ss = sun.get_local_sunset_time(tomorrow)
-print(tomorrow)
-print(tomorrow_sr)
-print(tomorrow_ss)
+print(datetime.now())
+print(sun.get_local_sunrise_time(datetime.now() + timedelta(days = 1)))
+print(sun.get_local_sunset_time(datetime.now() + timedelta(days = -1)))
 
 # Error handling (no sunset or sunrise on given location)
 #latitude = 87.55
