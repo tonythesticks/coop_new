@@ -8,6 +8,9 @@ Logging is done to the file specified in this config.ini file
 
 '''
 
+# TODO: Create threads for statusled
+# TODO: Get rid of 'count', do better doortime detection
+
 import logging
 import configparser
 from datetime import datetime, timezone, timedelta
@@ -138,7 +141,7 @@ def door():
 def main_loop():
     while True:
         door()
-        time.sleep(10)
+        time.sleep(60)
 
 
 if __name__ == "__main__":
