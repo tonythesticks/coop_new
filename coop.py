@@ -24,7 +24,7 @@ logging.basicConfig(filename=config['Settings']['LogFile'], level=config['Settin
 
 #Suntime
 sun = Sun(float(config['Location']['Latitude']), float(config['Location']['Longitude']))
-now = datetime.now(timezone.utc)
+#now = (datetime.now(timezone.utc) + timedelta( hours=7))
 offset = int(config['Door']['Offset'])
 doortime = int(config['Door']['Doortime'])
 
@@ -76,12 +76,17 @@ def motor_stop():
 
 def startup():
 	logging.info('Coop started')
-	logging.info("The UTC time is: %s", (now))
+#	logging.info("The UTC time is: %s", (now))
 
 def door():
+	now = datetime.now(timezone.utc)
+	closetime = sun.get_sunset_time() + timedelta(minutes=(offset))
+	opentime = sun.get_sunrise_time()
+	logging.debug("The UTC time is: %s", (now))
 	logging.info("Door will open between %s and %s UTC",(sun.get_sunrise_time()), (sun.get_sunrise_time() + timedelta(minutes=2)))
 	logging.info("Door will close %s minutes after sunset between %s and %s UTC", (offset), (sun.get_sunset_time() + timedelta(minutes=(offset))), (sun.get_sunset_time() + timedelta(minutes=(offset)) + timedelta(minutes=2)))
 	count = 0
+#	now = (datetime.now(timezone.utc) + timedelta( hours=7))
 	if now >= sun.get_sunrise_time() and now <= sun.get_sunrise_time() + timedelta(minutes=2):
 		logging.warning("It is day, opening door")
 		GPIO.output(Light,GPIO.HIGH)
@@ -116,21 +121,20 @@ def door():
 #				motor_stop()
 #				logging.error("ERROR, closing door took too long")
 #				status_error()
+	elif GPIO.input(BottomSensor) and ( now < opentime or now > closetime ) :
+		status_ok()
+		logging.debug("DoorClosedCheck: OK")
+	elif now > opentime and now < closetime and GPIO.input(TopSensor):
+		status_ok()
+		logging.debug("DoorOpenCheck: OK")
 	else:
-		if GPIO.input(BottomSensor) and ( now < sun.get_sunrise_time() or now > sun.get_sunset_time() ) :
-			status_ok()
-			logging.debug("DoorClosedCheck: OK")
-		elif now > sun.get_sunrise_time() and now < sun.get_sunset_time() and GPIO.input(TopSensor):
-			status_ok()
-			logging.debug("DoorOpenCheck: OK")
-		else:
-			status_error()
-			logging.debug("DoorCheck: ERROR")
+		status_error()
+		logging.error("DoorCheck: ERROR")
 
 def main_loop():
 	while True:
 		door()
-		time.sleep(10)
+		time.sleep(60)
 
 if __name__ == "__main__":
 	try:
