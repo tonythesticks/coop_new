@@ -18,11 +18,16 @@ def status_error():
     GPIO.output(StatusRed, GPIO.HIGH)
 
 def status_busy():
-    GPIO.output(StatusRed, GPIO.LOW)
-    GPIO.output(StatusGreen, GPIO.HIGH)
-    time.sleep(0.5)
-    GPIO.output(StatusGreen, GPIO.LOW)
-    time.sleep(0.5)
+	global stop_threads
+	stop_threads = False
+	while True:
+		GPIO.output(StatusRed,GPIO.LOW)
+		GPIO.output(StatusGreen,GPIO.HIGH)
+		time.sleep(0.5)
+		GPIO.output(StatusGreen,GPIO.LOW)
+		time.sleep(0.5)
+		if stop_threads:
+			break
 
 def status_ok():
     GPIO.output(StatusGreen, GPIO.HIGH)

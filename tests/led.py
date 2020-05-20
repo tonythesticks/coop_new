@@ -19,5 +19,4 @@ while(True):
 	time.sleep(10)
 
 Message = input("Press enter to stop")
-
 GPIO.cleanup()

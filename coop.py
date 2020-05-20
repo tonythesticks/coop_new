@@ -17,7 +17,7 @@ from datetime import datetime, timezone, timedelta
 import RPi.GPIO as GPIO
 import time
 from suntime import Sun, SunTimeException
-import statusled
+import threading
 
 # config
 config = configparser.ConfigParser()
@@ -29,7 +29,7 @@ logging.basicConfig(filename=config['Settings']['LogFile'], level=config['Settin
 
 # Suntime
 sun = Sun(float(config['Location']['Latitude']), float(config['Location']['Longitude']))
-#now = (datetime.now(timezone.utc) + timedelta( hours=7))
+now = (datetime.now(timezone.utc))
 offset = int(config['Door']['Offset'])
 doortime: int = int(config['Door']['Doortime'])
 opentime = sun.get_sunrise_time()
@@ -54,29 +54,62 @@ GPIO.setup(StatusRed, GPIO.OUT)
 Light = int(config['GPIO']['Light'])
 GPIO.setup(Light, GPIO.OUT)
 
-def close_door():
-    while GPIO.input(TopSensor) == False and datetime.now() + timedelta(microseconds=doortime) > datetime.now():
+def status_error():
+    GPIO.output(StatusGreen, GPIO.LOW)
+    GPIO.output(StatusRed, GPIO.HIGH)
+
+def status_busy():
+        while True:
+                GPIO.output(StatusRed,GPIO.LOW)
+                GPIO.output(StatusGreen,GPIO.HIGH)
+                time.sleep(0.5)
+                GPIO.output(StatusGreen,GPIO.LOW)
+                time.sleep(0.5)
+                if stop_threads:
+                        break
+
+def status_ok():
+    GPIO.output(StatusGreen, GPIO.HIGH)
+    GPIO.output(StatusRed, GPIO.LOW)
+
+def open_door():
+    global stop_threads
+    stop_threads = False
+    print("Open_Door")
+    starttime = (datetime.now())
+    print(datetime.now() + timedelta(microseconds=(doortime)))
+    t1 = threading.Thread(target = status_busy)
+    t1.start()
+    while True:
         motor_up()
-        statusled.status_busy()
-        logging.debug("Door going up")
-        if GPIO.input(TopSensor) and GPIO.input(BottomSensor) == False:
+        if GPIO.input(BottomSensor) == False:
+            print("Door is open")
             motor_stop()
             logging.info("Door is open")
-            statusled.status_ok()
-        elif GPIO.input(TopSensor) == False and datetime.now() >= datetime.now() + timedelta(microseconds=doortime):
+            stop_threads = True
+            t1.join()
             motor_stop()
+            door()
+            break
+        elif datetime.now() > starttime + timedelta(microseconds=(doortime)):
+            motor_stop()
+            print("doortime is verstreken")
+# TODO : Fatsoenlijke vertaling
             logging.error("ERROR, opening door took too long")
-            statusled.status_error()
+            stop_threads = True
+            t1.join()
+            status_error()
+            break
 
 def motor_up():
     GPIO.output(MotorUp, GPIO.HIGH)
     GPIO.output(MotorDown, GPIO.LOW)
-    statusled.status_busy()
+#   status_busy()
 
 def motor_down():
     GPIO.output(MotorDown, GPIO.HIGH)
     GPIO.output(MotorUp, GPIO.LOW)
-    statusled.status_busy()
+    status_busy()
 
 def motor_stop():
     GPIO.output(MotorUp, GPIO.LOW)
@@ -128,13 +161,13 @@ def door():
     #				status_error()
     else:
         if GPIO.input(BottomSensor) and (closetimeyesterday < now > opentime or closetime < now > opentimetomorrow):
-            statusled.status_ok()
+            status_ok()
             logging.debug("DoorClosedCheck: OK")
         elif sun.get_sunrise_time() < now < sun.get_sunset_time() and GPIO.input(TopSensor):
-            statusled.status_ok()
+            status_ok()
             logging.debug("DoorOpenCheck: OK")
         else:
-            statusled.status_error()
+            status_error()
             logging.error("DoorCheck: ERROR")
 
 
@@ -145,9 +178,9 @@ def main_loop():
 
 if __name__ == "__main__":
     try:
-        startup()
-#        close_door()
-        main_loop()
+#        startup()
+        open_door()
+#        main_loop()
     except RuntimeError as error:
         print(error.args[0])
     except KeyboardInterrupt:
