@@ -52,7 +52,7 @@ GPIO.setup(StatusRed, GPIO.OUT)
 Light = int(config['GPIO']['Light'])
 GPIO.setup(Light, GPIO.OUT)
 PWM = int(config['GPIO']['ENb'])
-GPIO.setup(PMW, GPIO.OUT)
+GPIO.setup(PWM, GPIO.OUT)
 p=GPIO.PWM(PWM,100)
 p.start(50)
 

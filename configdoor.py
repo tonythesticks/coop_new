@@ -45,25 +45,18 @@ p.start(50)
 print("\n")
 print("This script is to record the open and close times for the coop door.")
 print("Make sure you enter these values in the config.ini file.")
-print("s-start c-close o-open k-kill e-exit")
+print(" s - Enter = start \n c - Enter = close \n o - Enter = open \n \n You can exit/kill the script with CTRL+C")
 print("\n")
 
 def get_doortimes():
     while True:
-    x = raw_input()
+        x=input()
         if x == 's':
-            print("Door going up for start position")
             start()
         elif x == 'c':
             get_closetime()
         elif x == 'o':
             get_opentime()
-        elif x == 'k':
-            motor_stop()
-        elif raw_input() == 'e':
-            GPIO.cleanup()
-            print("GPIO Clean up")
-            break
         else:
             print("<<<  wrong data  >>>")
             print("please enter the defined data to continue.....")
@@ -89,7 +82,7 @@ def status_ok():
 def start():
     global stop_threads
     stop_threads = False
-    print("Opening_Door")
+    print("Opening_Door for optimal starting position")
     t1 = threading.Thread(target=status_busy)
     t1.start()
     while True:
@@ -135,7 +128,7 @@ def get_closetime():
             motor_stop()
             doortime_close_raw = datetime.now() - starttime
             doortime_close = round(doortime_close_raw.total_seconds() * 1000)
-            print("DoorTime_Close = ", doortime_open)
+            print("DoorTime_Close = ", doortime_close)
             stop_threads = True
             t1.join()
             get_doortimes()
