@@ -28,8 +28,8 @@ logging.basicConfig(filename=config['Settings']['LogFile'], level=config['Settin
 sun = Sun(float(config['Location']['Latitude']), float(config['Location']['Longitude']))
 now = (datetime.now(timezone.utc))
 offset = int(config['Door']['Offset'])
-doortime_open: int = int(config['Door']['Doortime_Open'])
-doortime_close: int = int(config['Door']['Doortime_Close'])
+doortime_open: int = 0
+doortime_close: int = 0
 opentime = sun.get_sunrise_time()
 closetime = sun.get_sunset_time() + timedelta(minutes=(offset))
 opentimetomorrow = sun.get_local_sunrise_time(datetime.now() + timedelta(days = 1))
@@ -78,25 +78,19 @@ def open_door():
     stop_threads = False
     print("Open_Door")
     starttime = (datetime.now())
+    print(starttime)
     t1 = threading.Thread(target = status_busy)
     t1.start()
     while True:
         motor_up()
         if GPIO.input(TopSensor) == False:
             motor_stop()
-            logging.info("Door is open")
+            doortime_open_raw = datetime.now() - starttime
+            doortime_open = round(doortime_open_raw.total_seconds() * 1000)
+            print("DoorTime_Open = ", doortime_open)
             stop_threads = True
             t1.join()
-            motor_stop()
-            main_loop()
-            break
-        elif datetime.now() > starttime + timedelta(milliseconds=(doortime_open)):
-            motor_stop()
-            logging.error("ERROR, opening door took too long")
-            stop_threads = True
-            t1.join()
-            status_error()
-            main_loop()
+            door()
             break
 
 def close_door():
