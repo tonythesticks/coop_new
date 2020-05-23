@@ -1,3 +1,14 @@
+'''
+This script is used to determine open/close times of your coop door and record them in milliseconds to fill in the coop.ini file.
+
+If your coop door is anywhere between the bottom and the top, pressing start will bring it right to the top (slowly, so you have time to stop it if necessary).
+Pressing C will close the coop door and record the closing time. Pressing O will open the coop door again and record the opening time.
+
+Opening normally is about three times as fast as closing the coop door. If you edit these settings in the coop.py script, you will have to edit them here as well.
+
+Using this script is at your own risk, don't kill chicks.
+'''
+
 import logging
 import configparser
 from datetime import datetime, timezone, timedelta
@@ -29,7 +40,7 @@ GPIO.setup(StatusRed, GPIO.OUT)
 PWM = int(config['GPIO']['ENb'])
 GPIO.setup(PWM, GPIO.OUT)
 p = GPIO.PWM(PWM, 100)
-p.start(50)
+#p.start(50)
 
 print("\n")
 print("This script is to record the open and close times for the coop door.")
@@ -72,6 +83,7 @@ def status_ok():
 
 
 def start():
+    p.start(25)
     global stop_threads
     stop_threads = False
     print("Opening_Door for optimal starting position")
@@ -87,6 +99,7 @@ def start():
 
 
 def get_opentime():
+    p.ChangeDutyCycle(25)
     global stop_threads
     stop_threads = False
     print("Open_Door")
@@ -108,6 +121,7 @@ def get_opentime():
 
 
 def get_closetime():
+    p.ChangeDutyCycle(75)
     global stop_threads
     stop_threads = False
     print("Close_Door")
@@ -129,13 +143,13 @@ def get_closetime():
 
 
 def motor_up():
-    p.ChangeDutyCycle(75)
+#    p.ChangeDutyCycle(75)
     GPIO.output(MotorUp, GPIO.HIGH)
     GPIO.output(MotorDown, GPIO.LOW)
 
 
 def motor_down():
-    p.ChangeDutyCycle(25)
+#    p.ChangeDutyCycle(25)
     GPIO.output(MotorDown, GPIO.HIGH)
     GPIO.output(MotorUp, GPIO.LOW)
 

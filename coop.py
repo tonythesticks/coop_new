@@ -136,16 +136,15 @@ def close_door():
             logging.info("Door is open")
             stop_threads = True
             t1.join()
-            motor_stop()
-            door()
+            main_loop()
             break
-        elif datetime.now() > starttime + timedelta(microseconds=(doortime_close)):
+        elif datetime.now() > starttime + timedelta(milliseconds=(doortime_close)):
             motor_stop()
             logging.error("ERROR, closing door took too long")
             stop_threads = True
             t1.join()
             status_error()
-            door()
+            main_loop()
             break
 
 def motor_up():
@@ -168,14 +167,22 @@ def startup():
     if GPIO.input(TopSensor) == False  and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         close_door()
         logging.warning("Door was open at startup while it should have been closed")
-    elif sun.get_sunrise_time() < now < sun.get_sunset_time() and GPIO.input(BottomSensor) == False:
+        Lights(0)
+    elif opentime < now < closetime and GPIO.input(BottomSensor) == False:
         open_door()
         logging.debug("Door was closed at startup while it should have been open")
-    elif GPIO.input(Bottomsensor) and GPIO.input(TopSensor):
+        Lights(3)
+    elif opentime < now < closetime and GPIO.input(TopSensor) == False:
+        logging.info("Door was already open, lights turned on.")
+        Lights(3)
+        main_loop()
+    elif GPIO.input(BottomSensor) == False  and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
+        logging.info("Door was already closed.")
+        Lights(0)
+        main_loop()
+    elif GPIO.input(BottomSensor) and GPIO.input(TopSensor):
         status_error()
         logging.error('Door is stuck somewhere')
-    else:
-        logging.info("Door is at right position")
 
 def door():
     logging.debug("Door will open between %s and %s UTC", opentime,
@@ -209,7 +216,6 @@ def main_loop():
 if __name__ == "__main__":
     try:
         startup()
-#        main_loop()
     except RuntimeError as error:
         print(error.args[0])
     except KeyboardInterrupt:
