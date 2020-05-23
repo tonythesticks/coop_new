@@ -1,19 +1,8 @@
-'''
-Coop
-
-A simple yet complete program to manage and monitor your coop.
-
-Configuration is done in the config.ini file.
-Logging is done to the file specified in this config.ini file
-
-'''
-
 import logging
 import configparser
 from datetime import datetime, timezone, timedelta
 import RPi.GPIO as GPIO
 import time
-from suntime import Sun, SunTimeException
 import threading
 
 # config
@@ -46,11 +35,10 @@ print("\n")
 print("This script is to record the open and close times for the coop door.")
 print("Make sure you enter these values in the config.ini file.")
 print(" s - Enter = start \n c - Enter = close \n o - Enter = open \n \n You can exit/kill the script with CTRL+C")
-print("\n")
 
 def get_doortimes():
     while True:
-        x=input()
+        x = input()
         if x == 's':
             start()
         elif x == 'c':
@@ -61,9 +49,11 @@ def get_doortimes():
             print("<<<  wrong data  >>>")
             print("please enter the defined data to continue.....")
 
+
 def status_error():
     GPIO.output(StatusGreen, GPIO.LOW)
     GPIO.output(StatusRed, GPIO.HIGH)
+
 
 def status_busy():
     while True:
@@ -75,9 +65,11 @@ def status_busy():
         if stop_threads:
             break
 
+
 def status_ok():
     GPIO.output(StatusGreen, GPIO.HIGH)
     GPIO.output(StatusRed, GPIO.LOW)
+
 
 def start():
     global stop_threads
@@ -92,6 +84,7 @@ def start():
             stop_threads = True
             t1.join()
             break
+
 
 def get_opentime():
     global stop_threads
