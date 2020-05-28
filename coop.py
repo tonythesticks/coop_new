@@ -84,20 +84,20 @@ def status_ok():
     GPIO.output(StatusRed, GPIO.LOW)
 
 
-def lights(brightness):
-    if brightness == 3:
+def lights(n):
+    if n == 3:
         GPIO.output(Led1, GPIO.HIGH)
         GPIO.output(Led2, GPIO.HIGH)
         GPIO.output(Led3, GPIO.HIGH)
-    elif brightness == 2:
+    elif n == 2:
         GPIO.output(Led1, GPIO.HIGH)
         GPIO.output(Led2, GPIO.LOW)
         GPIO.output(Led3, GPIO.HIGH)
-    elif brightness == 1:
+    elif n == 1:
         GPIO.output(Led1, GPIO.LOW)
         GPIO.output(Led2, GPIO.HIGH)
         GPIO.output(Led3, GPIO.LOW)
-    elif brightness == 0:
+    elif n == 0:
         GPIO.output(Led1, GPIO.LOW)
         GPIO.output(Led2, GPIO.LOW)
         GPIO.output(Led3, GPIO.LOW)
@@ -117,7 +117,7 @@ def open_door():
             logging.info("Door is open")
             stop_threads = True
             t1.join()
-            main_loop()
+#            main_loop()
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_open):
             motor_stop()
@@ -125,7 +125,7 @@ def open_door():
             stop_threads = True
             t1.join()
             status_error()
-            main_loop()
+#            main_loop()
             break
 
 
@@ -143,7 +143,7 @@ def close_door():
             logging.info("Door is open")
             stop_threads = True
             t1.join()
-            main_loop()
+#            main_loop()
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_close):
             motor_stop()
@@ -151,7 +151,7 @@ def close_door():
             stop_threads = True
             t1.join()
             status_error()
-            main_loop()
+#            main_loop()
             break
 
 
@@ -178,21 +178,34 @@ def startup():
     if GPIO.input(TopSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         close_door()
         logging.warning("Door was open at startup while it should have been closed")
-    elif sun.get_sunrise_time() < now < sun.get_sunset_time() and GPIO.input(BottomSensor) == False:
+        lights(0)
+        main_loop()
+    elif (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
+        close_door()
+        logging.warning("Doorstatus could not be determined but door should have been and is now closed.")
+        lights(0)
+        main_loop()
+    elif opentime < now < closetime and GPIO.input(BottomSensor) == False:
         open_door()
         logging.debug("Door was closed at startup while it should have been open")
         lights(3)
+        main_loop()
+    elif opentime < now < closetime:
+        open_door()
+        logging.debug("Doorstatus could not be determined but door should have been and is now closed.")
+        lights(3)
+        main_loop()
     elif opentime < now < closetime and GPIO.input(TopSensor) == False:
         logging.info("Door was already open, lights turned on.")
         lights(3)
         main_loop()
     elif GPIO.input(BottomSensor) == False  and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
-        logging.info("Door was already closed.")
+        logging.info("Door was already closed, lights turned off..")
         lights(0)
         main_loop()
-    elif GPIO.input(BottomSensor) and GPIO.input(TopSensor):
-        status_error()
-        logging.error('Door is stuck somewhere')
+#    elif GPIO.input(BottomSensor) and GPIO.input(TopSensor):
+#        status_error()
+#        logging.error('Door is stuck somewhere')
 
 
 def door():
@@ -208,17 +221,15 @@ def door():
         logging.warning("It is night, closing door")
         lights(0)
         close_door()
-    else:
-        if GPIO.input(BottomSensor) == False and (
-                closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
-            status_ok()
-            logging.debug("DoorClosedCheck: OK")
-        elif sun.get_sunrise_time() < now < sun.get_sunset_time() and GPIO.input(TopSensor) == False:
-            status_ok()
-            logging.debug("DoorOpenCheck: OK")
-        else:
-            status_error()
-            logging.error("DoorCheck: ERROR")
+    elif GPIO.input(BottomSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
+        status_ok()
+        logging.debug("DoorClosedCheck: OK")
+    elif sun.get_sunrise_time() < now < sun.get_sunset_time() and GPIO.input(TopSensor) == False:
+        status_ok()
+        logging.debug("DoorOpenCheck: OK")
+#        else:
+#            status_error()
+#            logging.error("DoorCheck: ERROR")
 
 
 def main_loop():
