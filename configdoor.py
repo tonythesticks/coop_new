@@ -95,6 +95,7 @@ def start():
             motor_stop()
             stop_threads = True
             t1.join()
+            print("Door is in optimal starting position")
             break
 
 
@@ -104,7 +105,6 @@ def get_opentime():
     stop_threads = False
     print("Open_Door")
     starttime = (datetime.now())
-    print(starttime)
     t1 = threading.Thread(target=status_busy)
     t1.start()
     while True:
@@ -126,7 +126,6 @@ def get_closetime():
     stop_threads = False
     print("Close_Door")
     starttime = (datetime.now())
-    print(starttime)
     t1 = threading.Thread(target=status_busy)
     t1.start()
     while True:
@@ -143,13 +142,11 @@ def get_closetime():
 
 
 def motor_up():
-#    p.ChangeDutyCycle(75)
     GPIO.output(MotorUp, GPIO.HIGH)
     GPIO.output(MotorDown, GPIO.LOW)
 
 
 def motor_down():
-#    p.ChangeDutyCycle(25)
     GPIO.output(MotorDown, GPIO.HIGH)
     GPIO.output(MotorUp, GPIO.LOW)
 
