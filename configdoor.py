@@ -95,6 +95,7 @@ def start():
             motor_stop()
             stop_threads = True
             t1.join()
+            print("Door is in optimal starting position")
             break
 
 

@@ -8,6 +8,15 @@ Logging is done to the file specified in this config.ini file
 
 """
 
+#TODO: Make 'door' run at every whole minute with something like 'if secondold is > second then do this ... secondold = second'.
+#TODO: Make 'door' the main script
+#TODO: Make script a service run at startup
+#TODO: Implement early-open time
+#TODO: Place variables in 'door' and 'startup', now they'll never change after initial startup
+#TODO: Enable debug logging for the LED's
+#TODO: Put motor in one definition with variables
+#TODO: Put status(led) in one definition with variables
+
 import logging
 import configparser
 from datetime import datetime, timezone, timedelta
@@ -30,7 +39,7 @@ now = (datetime.now(timezone.utc))
 offset = int(config['Door']['Offset'])
 doortime_open: int = int(config['Door']['Doortime_Open'])
 doortime_close: int = int(config['Door']['Doortime_Close'])
-opentime = sun.get_sunrise_time() + timedelta(hours=2)
+opentime = sun.get_sunrise_time() + timedelta(hours=2, minutes=10)
 closetime = sun.get_sunset_time() + timedelta(minutes=offset)
 opentimetomorrow = sun.get_local_sunrise_time(datetime.now() + timedelta(days=1))
 closetimeyesterday = sun.get_local_sunset_time(datetime.now() + timedelta(days=-1)) + timedelta(minutes=offset)
@@ -209,6 +218,7 @@ def startup():
 
 
 def door():
+    now = (datetime.now(timezone.utc))
     logging.debug("Door will open between %s and %s UTC", opentime,
                   (opentime + timedelta(minutes=1)))
     logging.debug("Door will close %s minutes after sunset between %s and %s UTC", offset,
@@ -217,10 +227,12 @@ def door():
         logging.warning("It is day, opening door")
         lights(3)
         open_door()
+        main_loop()
     elif closetime <= now <= closetime + timedelta(minutes=1):
         logging.warning("It is night, closing door")
         lights(0)
         close_door()
+        main_loop()
     elif GPIO.input(BottomSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         status_ok()
         logging.debug("DoorClosedCheck: OK")
