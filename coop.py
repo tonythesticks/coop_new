@@ -27,7 +27,7 @@ import threading
 
 # config
 config = configparser.ConfigParser()
-config.read('coop.ini')
+config.read('/home/pi/coop/coop.ini')
 
 # logging
 logging.basicConfig(filename=config['Settings']['LogFile'], level=config['Settings']['LogLevel'],
@@ -39,7 +39,7 @@ now = (datetime.now(timezone.utc))
 offset = int(config['Door']['Offset'])
 doortime_open: int = int(config['Door']['Doortime_Open'])
 doortime_close: int = int(config['Door']['Doortime_Close'])
-opentime = sun.get_sunrise_time() + timedelta(hours=2, minutes=10)
+opentime = sun.get_sunrise_time()
 closetime = sun.get_sunset_time() + timedelta(minutes=offset)
 opentimetomorrow = sun.get_local_sunrise_time(datetime.now() + timedelta(days=1))
 closetimeyesterday = sun.get_local_sunset_time(datetime.now() + timedelta(days=-1)) + timedelta(minutes=offset)
@@ -148,6 +148,7 @@ def close_door():
     while True:
         motor_down()
         if GPIO.input(BottomSensor) == False:
+            time.sleep(1) #The sensor is a bit too sensitive (or not well enough placed) so to close entirely it needs another second
             motor_stop()
             logging.info("Door is closed")
             stop_threads = True
@@ -189,27 +190,27 @@ def startup():
         logging.warning("Door was open at startup while it should have been closed")
         lights(0)
         main_loop()
-    elif (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
-        close_door()
-        logging.warning("Doorstatus could not be determined but door should have been and is now closed.")
-        lights(0)
-        main_loop()
     elif opentime < now < closetime and GPIO.input(BottomSensor) == False:
         open_door()
         logging.debug("Door was closed at startup while it should have been open")
-        lights(3)
-        main_loop()
-    elif opentime < now < closetime:
-        open_door()
-        logging.debug("Doorstatus could not be determined but door should have been and is now closed.")
         lights(3)
         main_loop()
     elif opentime < now < closetime and GPIO.input(TopSensor) == False:
         logging.info("Door was already open, lights turned on.")
         lights(3)
         main_loop()
+    elif opentime < now < closetime:
+        open_door()
+        logging.debug("Doorstatus could not be determined but door should have been and is now open.")
+        lights(3)
+        main_loop()
     elif GPIO.input(BottomSensor) == False  and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         logging.info("Door was already closed, lights turned off..")
+        lights(0)
+        main_loop()
+    elif (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
+        close_door()
+        logging.warning("Doorstatus could not be determined but door should have been and is now closed.")
         lights(0)
         main_loop()
 #    elif GPIO.input(BottomSensor) and GPIO.input(TopSensor):
@@ -218,20 +219,29 @@ def startup():
 
 
 def door():
+    opentime = sun.get_sunrise_time()
+    closetime = sun.get_sunset_time() + timedelta(minutes=offset)
+    opentimetomorrow = sun.get_local_sunrise_time(datetime.now() + timedelta(days=1))
+    closetimeyesterday = sun.get_local_sunset_time(datetime.now() + timedelta(days=-1)) + timedelta(minutes=offset)
     now = (datetime.now(timezone.utc))
-    logging.debug("Door will open between %s and %s UTC", opentime,
-                  (opentime + timedelta(minutes=1)))
+    next_open = opentime if opentime > now else opentimetomorrow
+    next_close = closetime if closetime > now else (sun.get_local_sunset_time(datetime.now() + timedelta(days=1)) + timedelta(minutes=offset))
+    logging.debug("Door will open between %s and %s UTC", next_open,
+                  (next_open + timedelta(minutes=1)))
     logging.debug("Door will close %s minutes after sunset between %s and %s UTC", offset,
-                  closetime, closetime + timedelta(minutes=1))
+                  next_close, next_close + timedelta(minutes=1))
     if opentime <= now <= opentime + timedelta(minutes=1):
         logging.warning("It is day, opening door")
         lights(3)
         open_door()
+        time.sleep(60)
+#TODO: Fix this, this should prevent the open_door() to run multiple times which in turn should prevent the motor burning for lack of a topsensor.
         main_loop()
     elif closetime <= now <= closetime + timedelta(minutes=1):
         logging.warning("It is night, closing door")
         lights(0)
         close_door()
+        time.sleep(60)
         main_loop()
     elif GPIO.input(BottomSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         status_ok()
