@@ -226,22 +226,26 @@ def door():
     now = (datetime.now(timezone.utc))
     next_open = opentime if opentime > now else opentimetomorrow
     next_close = closetime if closetime > now else (sun.get_local_sunset_time(datetime.now() + timedelta(days=1)) + timedelta(minutes=offset))
-    logging.debug("Door will open between %s and %s UTC", next_open,
-                  (next_open + timedelta(minutes=1)))
-    logging.debug("Door will close %s minutes after sunset between %s and %s UTC", offset,
-                  next_close, next_close + timedelta(minutes=1))
+#    logging.debug("Door will open between %s and %s UTC", next_open,
+#                  (next_open + timedelta(minutes=1)))
+#    logging.debug("Door will close %s minutes after sunset between %s and %s UTC", offset,
+#                  next_close, next_close + timedelta(minutes=1))
     if opentime <= now <= opentime + timedelta(minutes=1):
-        logging.warning("It is day, opening door")
+        logging.warning("Opening door")
         lights(3)
         open_door()
         time.sleep(60)
 #TODO: Fix this, this should prevent the open_door() to run multiple times which in turn should prevent the motor burning for lack of a topsensor.
+        logging.debug("Door will open again at %s UTC", next_open)
+        logging.debug("Door will close %s minutes after sunset at %s UTC", offset, next_close)
         main_loop()
     elif closetime <= now <= closetime + timedelta(minutes=1):
-        logging.warning("It is night, closing door")
+        logging.warning("Closing door")
         lights(0)
         close_door()
         time.sleep(60)
+        logging.debug("Door will open at %s UTC", next_open) 
+        logging.debug("Door will close again %s minutes after sunset at %s UTC", offset, next_close)
         main_loop()
     elif GPIO.input(BottomSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         status_ok()
