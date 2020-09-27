@@ -10,10 +10,7 @@ Logging is done to the file specified in this config.ini file
 
 #TODO: Make 'door' run at every whole minute with something like 'if secondold is > second then do this ... secondold = second'.
 #TODO: Make 'door' the main script
-#TODO: Make script a service run at startup
 #TODO: Implement early-open time
-#TODO: Place variables in 'door' and 'startup', now they'll never change after initial startup
-#TODO: Enable debug logging for the LED's
 #TODO: Put motor in one definition with variables
 #TODO: Put status(led) in one definition with variables
 
@@ -24,6 +21,7 @@ import RPi.GPIO as GPIO
 import time
 from suntime import Sun
 import threading
+import urllib.request
 
 # config
 config = configparser.ConfigParser()
@@ -39,9 +37,9 @@ now = (datetime.now(timezone.utc))
 offset = int(config['Door']['Offset'])
 doortime_open: int = int(config['Door']['Doortime_Open'])
 doortime_close: int = int(config['Door']['Doortime_Close'])
-opentime = sun.get_sunrise_time()
+opentime = sun.get_sunrise_time() - timedelta(minutes=offset)
 closetime = sun.get_sunset_time() + timedelta(minutes=offset)
-opentimetomorrow = sun.get_local_sunrise_time(datetime.now() + timedelta(days=1))
+opentimetomorrow = sun.get_local_sunrise_time(datetime.now() + timedelta(days=1) - timedelta(minutes=offset))
 closetimeyesterday = sun.get_local_sunset_time(datetime.now() + timedelta(days=-1)) + timedelta(minutes=offset)
 global stop_threads
 
@@ -98,18 +96,22 @@ def lights(n):
         GPIO.output(Led1, GPIO.HIGH)
         GPIO.output(Led2, GPIO.HIGH)
         GPIO.output(Led3, GPIO.HIGH)
-    elif n == 2:
+        urllib.request.urlopen('http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=35&switchcmd=On')
+    elif n ==2:
         GPIO.output(Led1, GPIO.HIGH)
         GPIO.output(Led2, GPIO.LOW)
         GPIO.output(Led3, GPIO.HIGH)
+        urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=35&switchcmd=On")
     elif n == 1:
         GPIO.output(Led1, GPIO.LOW)
         GPIO.output(Led2, GPIO.HIGH)
         GPIO.output(Led3, GPIO.LOW)
+        urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=35&switchcmd=On")
     elif n == 0:
         GPIO.output(Led1, GPIO.LOW)
         GPIO.output(Led2, GPIO.LOW)
         GPIO.output(Led3, GPIO.LOW)
+        urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=35&switchcmd=Off")
 
 
 def open_door():
@@ -122,7 +124,9 @@ def open_door():
     while True:
         motor_up()
         if GPIO.input(TopSensor) == False:
+            time.sleep(1)
             motor_stop()
+            urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=On")
             logging.info("Door is open")
             stop_threads = True
             t1.join()
@@ -130,6 +134,7 @@ def open_door():
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_open):
             motor_stop()
+            urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=Off")
             logging.error("ERROR, opening door took too long")
             stop_threads = True
             t1.join()
@@ -151,12 +156,14 @@ def close_door():
             time.sleep(1) #The sensor is a bit too sensitive (or not well enough placed) so to close entirely it needs another second
             motor_stop()
             logging.info("Door is closed")
+            urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=Off")
             stop_threads = True
             t1.join()
 #            main_loop()
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_close):
             motor_stop()
+            urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=On")
             logging.error("ERROR, closing door took too long")
             stop_threads = True
             t1.join()
@@ -219,9 +226,9 @@ def startup():
 
 
 def door():
-    opentime = sun.get_sunrise_time()
+    opentime = sun.get_sunrise_time() - timedelta(minutes=offset)
     closetime = sun.get_sunset_time() + timedelta(minutes=offset)
-    opentimetomorrow = sun.get_local_sunrise_time(datetime.now() + timedelta(days=1))
+    opentimetomorrow = sun.get_local_sunrise_time(datetime.now() + timedelta(days=1) - timedelta(minutes=offset))
     closetimeyesterday = sun.get_local_sunset_time(datetime.now() + timedelta(days=-1)) + timedelta(minutes=offset)
     now = (datetime.now(timezone.utc))
     next_open = opentime if opentime > now else opentimetomorrow
@@ -249,9 +256,11 @@ def door():
         main_loop()
     elif GPIO.input(BottomSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         status_ok()
+        urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=Off")
         logging.debug("DoorClosedCheck: OK")
     elif opentime < now < closetime and GPIO.input(TopSensor) == False:
         status_ok()
+        urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=On")
         logging.debug("DoorOpenCheck: OK")
 #        else:
 #            status_error()
