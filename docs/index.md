@@ -19,3 +19,8 @@ This project is the codebase for a complete, simple and flexible automated chick
 - Designed to run off-grid
 - Human readable logging
 - Screen support
+
+
+---
+
+Get started: [Hardware >>](hardware.md)
