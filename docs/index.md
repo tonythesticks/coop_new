@@ -1,6 +1,8 @@
-layout: page
-title: "Home"
-permalink: /index/
+---
+layout: default
+title: Intro
+nav_order: 1
+---
 
 
 #test#
