@@ -25,7 +25,7 @@ import urllib.request
 
 # config
 config = configparser.ConfigParser()
-config.read('/home/pi/coop/coop.ini')
+config.read('/home/pi/projects/coop_new/coop.ini')
 
 # logging
 logging.basicConfig(filename=config['Settings']['LogFile'], level=config['Settings']['LogLevel'],
@@ -64,10 +64,10 @@ Led2 = int(config['GPIO']['Led2'])
 GPIO.setup(Led2, GPIO.OUT)
 Led3 = int(config['GPIO']['Led3'])
 GPIO.setup(Led3, GPIO.OUT)
-PWM = int(config['GPIO']['ENb'])
-GPIO.setup(PWM, GPIO.OUT)
-p = GPIO.PWM(PWM, 100)
-p.start(50)
+#PWM = int(config['GPIO']['ENb'])
+#GPIO.setup(PWM, GPIO.OUT)
+#p = GPIO.PWM(PWM, 100)
+#p.start(50)
 
 
 def status_error():
@@ -173,20 +173,20 @@ def close_door():
 
 
 def motor_up():
-    p.ChangeDutyCycle(75)
-    GPIO.output(MotorUp, GPIO.HIGH)
-    GPIO.output(MotorDown, GPIO.LOW)
+    #p.ChangeDutyCycle(75)
+    GPIO.output(MotorUp, GPIO.LOW)
+    GPIO.output(MotorDown, GPIO.HIGH)
 
 
 def motor_down():
-    p.ChangeDutyCycle(25)
-    GPIO.output(MotorDown, GPIO.HIGH)
-    GPIO.output(MotorUp, GPIO.LOW)
+    #p.ChangeDutyCycle(25)
+    GPIO.output(MotorDown, GPIO.LOW)
+    GPIO.output(MotorUp, GPIO.HIGH)
 
 
 def motor_stop():
-    GPIO.output(MotorUp, GPIO.LOW)
-    GPIO.output(MotorDown, GPIO.LOW)
+    GPIO.output(MotorUp, GPIO.HIGH)
+    GPIO.output(MotorDown, GPIO.HIGH)
 
 
 def startup():
