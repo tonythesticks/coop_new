@@ -24,7 +24,7 @@ doortime_open: int = 0
 doortime_close: int = 0
 
 # GPIO
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 TopSensor = int(config['GPIO']['TopSensor'])
 BottomSensor = int(config['GPIO']['BottomSensor'])
 GPIO.setup(TopSensor, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -37,9 +37,9 @@ StatusGreen = int(config['GPIO']['StatusGreen'])
 GPIO.setup(StatusGreen, GPIO.OUT)
 StatusRed = int(config['GPIO']['StatusRed'])
 GPIO.setup(StatusRed, GPIO.OUT)
-PWM = int(config['GPIO']['ENb'])
-GPIO.setup(PWM, GPIO.OUT)
-p = GPIO.PWM(PWM, 100)
+#PWM = int(config['GPIO']['ENb'])
+#GPIO.setup(PWM, GPIO.OUT)
+#p = GPIO.PWM(PWM, 100)
 #p.start(50)
 
 print("\n")
@@ -83,7 +83,7 @@ def status_ok():
 
 
 def start():
-    p.start(25)
+    #p.start(25)
     global stop_threads
     stop_threads = False
     print("Opening_Door for optimal starting position")
@@ -100,7 +100,7 @@ def start():
 
 
 def get_opentime():
-    p.ChangeDutyCycle(25)
+    #p.ChangeDutyCycle(25)
     global stop_threads
     stop_threads = False
     print("Open_Door")
@@ -121,7 +121,7 @@ def get_opentime():
 
 
 def get_closetime():
-    p.ChangeDutyCycle(75)
+    #p.ChangeDutyCycle(75)
     global stop_threads
     stop_threads = False
     print("Close_Door")

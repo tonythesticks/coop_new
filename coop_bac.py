@@ -51,10 +51,6 @@ TopSensor = int(config['GPIO']['TopSensor'])
 BottomSensor = int(config['GPIO']['BottomSensor'])
 GPIO.setup(TopSensor, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(BottomSensor, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-OpenButton = int(config['GPIO']['OpenButton'])
-CloseButton = int(config['GPIO']['CloseButton'])
-GPIO.setup(OpenButton, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(CloseButton, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 MotorUp = int(config['GPIO']['IN3'])
 GPIO.setup(MotorUp, GPIO.OUT)
 MotorDown = int(config['GPIO']['IN4'])
@@ -69,6 +65,10 @@ Led2 = int(config['GPIO']['Led2'])
 GPIO.setup(Led2, GPIO.OUT)
 Led3 = int(config['GPIO']['Led3'])
 GPIO.setup(Led3, GPIO.OUT)
+#PWM = int(config['GPIO']['ENb'])
+#GPIO.setup(PWM, GPIO.OUT)
+#p = GPIO.PWM(PWM, 100)
+#p.start(50)
 
 
 def status_error():
@@ -92,6 +92,28 @@ def status_ok():
     GPIO.output(StatusRed, GPIO.LOW)
 
 
+def lights(n):
+    if n == 3:
+        GPIO.output(Led1, GPIO.HIGH)
+        GPIO.output(Led2, GPIO.HIGH)
+        GPIO.output(Led3, GPIO.HIGH)
+        #urllib.request.urlopen('http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=35&switchcmd=On')
+    elif n ==2:
+        GPIO.output(Led1, GPIO.HIGH)
+        GPIO.output(Led2, GPIO.LOW)
+        GPIO.output(Led3, GPIO.HIGH)
+        #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=35&switchcmd=On")
+    elif n == 1:
+        GPIO.output(Led1, GPIO.LOW)
+        GPIO.output(Led2, GPIO.HIGH)
+        GPIO.output(Led3, GPIO.LOW)
+        #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=35&switchcmd=On")
+    elif n == 0:
+        GPIO.output(Led1, GPIO.LOW)
+        GPIO.output(Led2, GPIO.LOW)
+        GPIO.output(Led3, GPIO.LOW)
+        #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=35&switchcmd=Off")
+
 
 def open_door():
     global stop_threads
@@ -103,8 +125,9 @@ def open_door():
     while True:
         motor_up()
         if GPIO.input(TopSensor) == False:
-            #time.sleep(1)
+            time.sleep(1)
             motor_stop()
+            #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=On")
             logging.info("Door is open")
             stop_threads = True
             t1.join()
@@ -112,7 +135,8 @@ def open_door():
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_open):
             motor_stop()
-            #logging.error("ERROR, opening door took too long")
+            #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=Off")
+            logging.error("ERROR, opening door took too long")
             stop_threads = True
             t1.join()
             status_error()
@@ -130,16 +154,18 @@ def close_door():
     while True:
         motor_down()
         if GPIO.input(BottomSensor) == False:
-            time.sleep(0.2) #The sensor is a bit too sensitive (or not well enough placed) so to close entirely it needs another second
+            time.sleep(1) #The sensor is a bit too sensitive (or not well enough placed) so to close entirely it needs another second
             motor_stop()
             logging.info("Door is closed")
+            #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=Off")
             stop_threads = True
             t1.join()
 #            main_loop()
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_close):
             motor_stop()
-            #logging.error("ERROR, closing door took too long")
+            #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=On")
+            logging.error("ERROR, closing door took too long")
             stop_threads = True
             t1.join()
             status_error()
@@ -148,11 +174,13 @@ def close_door():
 
 
 def motor_up():
+    #p.ChangeDutyCycle(75)
     GPIO.output(MotorUp, GPIO.LOW)
     GPIO.output(MotorDown, GPIO.HIGH)
 
 
 def motor_down():
+    #p.ChangeDutyCycle(25)
     GPIO.output(MotorDown, GPIO.LOW)
     GPIO.output(MotorUp, GPIO.HIGH)
 
@@ -168,26 +196,34 @@ def startup():
     if GPIO.input(TopSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         close_door()
         logging.warning("Door was open at startup while it should have been closed")
+        lights(0)
         main_loop()
     elif opentime < now < closetime and GPIO.input(BottomSensor) == False:
         open_door()
         logging.debug("Door was closed at startup while it should have been open")
+        lights(3)
         main_loop()
     elif opentime < now < closetime and GPIO.input(TopSensor) == False:
-        logging.info("Door was already open.")
+        logging.info("Door was already open, lights turned on.")
+        lights(3)
         main_loop()
     elif opentime < now < closetime:
         open_door()
         logging.debug("Doorstatus could not be determined but door should have been and is now open.")
+        lights(3)
         main_loop()
     elif GPIO.input(BottomSensor) == False  and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
-        logging.info("Door was already closed")
+        logging.info("Door was already closed, lights turned off..")
+        lights(0)
         main_loop()
     elif (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
-        #open_door()
         close_door()
         logging.warning("Doorstatus could not be determined but door should have been and is now closed.")
+        lights(0)
         main_loop()
+#    elif GPIO.input(BottomSensor) and GPIO.input(TopSensor):
+#        status_error()
+#        logging.error('Door is stuck somewhere')
 
 
 def door():
@@ -198,12 +234,13 @@ def door():
     now = (datetime.now(timezone.utc))
     next_open = opentime if opentime > now else opentimetomorrow
     next_close = closetime if closetime > now else (sun.get_local_sunset_time(datetime.now() + timedelta(days=1)) + timedelta(minutes=offset))
-    #logging.debug("Door will open between %s and %s UTC", next_open,
-    #              (next_open + timedelta(minutes=1)))
-    #logging.debug("Door will close %s minutes after sunset between %s and %s UTC", offset,
-    #              next_close, next_close + timedelta(minutes=1))
+#    logging.debug("Door will open between %s and %s UTC", next_open,
+#                  (next_open + timedelta(minutes=1)))
+#    logging.debug("Door will close %s minutes after sunset between %s and %s UTC", offset,
+#                  next_close, next_close + timedelta(minutes=1))
     if opentime <= now <= opentime + timedelta(minutes=1):
         logging.warning("Opening door")
+        lights(3)
         open_door()
         time.sleep(60)
 #TODO: Fix this, this should prevent the open_door() to run multiple times which in turn should prevent the motor burning for lack of a topsensor.
@@ -212,6 +249,7 @@ def door():
         main_loop()
     elif closetime <= now <= closetime + timedelta(minutes=1):
         logging.warning("Closing door")
+        lights(0)
         close_door()
         time.sleep(60)
         logging.debug("Door will open at %s UTC", next_open) 
@@ -219,29 +257,22 @@ def door():
         main_loop()
     elif GPIO.input(BottomSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         status_ok()
-        #logging.debug("DoorClosedCheck: OK")
+        #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=Off")
+        logging.debug("DoorClosedCheck: OK")
     elif opentime < now < closetime and GPIO.input(TopSensor) == False:
         status_ok()
-        #logging.debug("DoorOpenCheck: OK")
+        #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=On")
+        logging.debug("DoorOpenCheck: OK")
+#        else:
+#            status_error()
+#            logging.error("DoorCheck: ERROR")
 
-    
+
 def main_loop():
     while True:
-        for i in range(60):
-            if GPIO.input(OpenButton)==0:
-                print("Manually Opening")
-                logging.debug("Door Manually Opened")
-                open_door()
-                #time.sleep(0)
-            elif GPIO.input(CloseButton)==1:
-                print("Manually Closing")
-                logging.debug("Door Manually Closed")
-                close_door()
-                #time.sleep(0)
-            else:
-                time.sleep(1)       
         door()
-        
+        time.sleep(60)
+
 
 if __name__ == "__main__":
     try:

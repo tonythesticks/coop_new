@@ -94,55 +94,55 @@ def status_ok():
 
 
 def open_door():
-    global stop_threads
-    stop_threads = False
+    #global stop_threads
+    #stop_threads = False
     print("Open_Door")
     starttime = (datetime.now())
-    t1 = threading.Thread(target=status_busy)
-    t1.start()
+    #t1 = threading.Thread(target=status_busy)
+    #t1.start()
     while True:
         motor_up()
-        if GPIO.input(TopSensor) == False:
-            #time.sleep(1)
-            motor_stop()
-            logging.info("Door is open")
-            stop_threads = True
-            t1.join()
-#            main_loop()
-            break
-        elif datetime.now() > starttime + timedelta(milliseconds=doortime_open):
+        #if GPIO.input(TopSensor) == False:
+        #    time.sleep(1)
+        #    motor_stop()
+        #    logging.info("Door is open")
+        #    stop_threads = True
+        #    t1.join()
+#       #     main_loop()
+        #    break
+        if datetime.now() > starttime + timedelta(milliseconds=doortime_open):
             motor_stop()
             #logging.error("ERROR, opening door took too long")
-            stop_threads = True
-            t1.join()
-            status_error()
+            #stop_threads = True
+            #t1.join()
+            #status_error()
 #            main_loop()
             break
 
 
 def close_door():
-    global stop_threads
-    stop_threads = False
+    #global stop_threads
+    #stop_threads = False
     print("Close_Door")
     starttime = (datetime.now())
-    t1 = threading.Thread(target=status_busy)
-    t1.start()
+    #ts1 = threading.Thread(target=status_busy)
+    #t1.start()
     while True:
         motor_down()
-        if GPIO.input(BottomSensor) == False:
-            time.sleep(0.2) #The sensor is a bit too sensitive (or not well enough placed) so to close entirely it needs another second
-            motor_stop()
-            logging.info("Door is closed")
-            stop_threads = True
-            t1.join()
+        #if GPIO.input(BottomSensor) == False:
+        #    #time.sleep(1) #The sensor is a bit too sensitive (or not well enough placed) so to close entirely it needs another second
+        #    motor_stop()
+        #    logging.info("Door is closed")
+        #    stop_threads = True
+        #    t1.join()
 #            main_loop()
-            break
-        elif datetime.now() > starttime + timedelta(milliseconds=doortime_close):
+        #    break
+        if datetime.now() > starttime + timedelta(milliseconds=doortime_close):
             motor_stop()
             #logging.error("ERROR, closing door took too long")
-            stop_threads = True
-            t1.join()
-            status_error()
+            #stop_threads = True
+            #t1.join()
+            #status_error()
 #            main_loop()
             break
 
@@ -184,7 +184,7 @@ def startup():
         logging.info("Door was already closed")
         main_loop()
     elif (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
-        #open_door()
+        open_door()
         close_door()
         logging.warning("Doorstatus could not be determined but door should have been and is now closed.")
         main_loop()
@@ -219,10 +219,10 @@ def door():
         main_loop()
     elif GPIO.input(BottomSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         status_ok()
-        #logging.debug("DoorClosedCheck: OK")
+        logging.debug("DoorClosedCheck: OK")
     elif opentime < now < closetime and GPIO.input(TopSensor) == False:
         status_ok()
-        #logging.debug("DoorOpenCheck: OK")
+        logging.debug("DoorOpenCheck: OK")
 
     
 def main_loop():

@@ -53,8 +53,8 @@ GPIO.setup(TopSensor, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(BottomSensor, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 OpenButton = int(config['GPIO']['OpenButton'])
 CloseButton = int(config['GPIO']['CloseButton'])
-GPIO.setup(OpenButton, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(CloseButton, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(OpenButton, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(CloseButton, GPIO.IN) #, pull_up_down=GPIO.PUD_DOWN)
 MotorUp = int(config['GPIO']['IN3'])
 GPIO.setup(MotorUp, GPIO.OUT)
 MotorDown = int(config['GPIO']['IN4'])
@@ -103,7 +103,7 @@ def open_door():
     while True:
         motor_up()
         if GPIO.input(TopSensor) == False:
-            #time.sleep(1)
+            time.sleep(1)
             motor_stop()
             logging.info("Door is open")
             stop_threads = True
@@ -112,7 +112,7 @@ def open_door():
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_open):
             motor_stop()
-            #logging.error("ERROR, opening door took too long")
+            logging.error("ERROR, opening door took too long")
             stop_threads = True
             t1.join()
             status_error()
@@ -130,7 +130,7 @@ def close_door():
     while True:
         motor_down()
         if GPIO.input(BottomSensor) == False:
-            time.sleep(0.2) #The sensor is a bit too sensitive (or not well enough placed) so to close entirely it needs another second
+            time.sleep(1) #The sensor is a bit too sensitive (or not well enough placed) so to close entirely it needs another second
             motor_stop()
             logging.info("Door is closed")
             stop_threads = True
@@ -139,7 +139,7 @@ def close_door():
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_close):
             motor_stop()
-            #logging.error("ERROR, closing door took too long")
+            logging.error("ERROR, closing door took too long")
             stop_threads = True
             t1.join()
             status_error()
@@ -148,11 +148,13 @@ def close_door():
 
 
 def motor_up():
+    #p.ChangeDutyCycle(75)
     GPIO.output(MotorUp, GPIO.LOW)
     GPIO.output(MotorDown, GPIO.HIGH)
 
 
 def motor_down():
+    #p.ChangeDutyCycle(25)
     GPIO.output(MotorDown, GPIO.LOW)
     GPIO.output(MotorUp, GPIO.HIGH)
 
@@ -184,10 +186,12 @@ def startup():
         logging.info("Door was already closed")
         main_loop()
     elif (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
-        #open_door()
         close_door()
         logging.warning("Doorstatus could not be determined but door should have been and is now closed.")
         main_loop()
+#    elif GPIO.input(BottomSensor) and GPIO.input(TopSensor):
+#        status_error()
+#        logging.error('Door is stuck somewhere')
 
 
 def door():
@@ -198,10 +202,10 @@ def door():
     now = (datetime.now(timezone.utc))
     next_open = opentime if opentime > now else opentimetomorrow
     next_close = closetime if closetime > now else (sun.get_local_sunset_time(datetime.now() + timedelta(days=1)) + timedelta(minutes=offset))
-    #logging.debug("Door will open between %s and %s UTC", next_open,
-    #              (next_open + timedelta(minutes=1)))
-    #logging.debug("Door will close %s minutes after sunset between %s and %s UTC", offset,
-    #              next_close, next_close + timedelta(minutes=1))
+#    logging.debug("Door will open between %s and %s UTC", next_open,
+#                  (next_open + timedelta(minutes=1)))
+#    logging.debug("Door will close %s minutes after sunset between %s and %s UTC", offset,
+#                  next_close, next_close + timedelta(minutes=1))
     if opentime <= now <= opentime + timedelta(minutes=1):
         logging.warning("Opening door")
         open_door()
@@ -219,29 +223,49 @@ def door():
         main_loop()
     elif GPIO.input(BottomSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         status_ok()
-        #logging.debug("DoorClosedCheck: OK")
+        #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=Off")
+        logging.debug("DoorClosedCheck: OK")
     elif opentime < now < closetime and GPIO.input(TopSensor) == False:
         status_ok()
-        #logging.debug("DoorOpenCheck: OK")
+        #urllib.request.urlopen("http://192.168.1.104:8080/json.htm?type=command&param=switchlight&idx=36&switchcmd=On")
+        logging.debug("DoorOpenCheck: OK")
+#        else:
+#            status_error()
+#           logging.error("DoorCheck: ERROR")
+def manual_open(self):
+    GPIO.remove_event_detect(CloseButton)
+    GPIO.remove_event_detect(OpenButton)
+    #time.sleep(0.3)
+    print(GPIO.input(OpenButton))
+    if GPIO.input(OpenButton)==0:
+        print("Manually Opened")
+        logging.debug("Door Manually Opened")
+        open_door()
+    time.sleep(10)    
+    GPIO.add_event_detect(OpenButton,GPIO.FALLING,callback=manual_open,bouncetime=500)
+    GPIO.add_event_detect(CloseButton,GPIO.RISING,callback=manual_close,bouncetime=500)
 
+def manual_close(self):
+    GPIO.remove_event_detect(CloseButton)
+    GPIO.remove_event_detect(OpenButton)
+    #print("Triggered")
+    #time.sleep(0.3)    
+    #print(GPIO.input(CloseButton))
+    #if GPIO.input(CloseButton)==1:
+    print("Manually Closed")
+    logging.debug("Door Manually Closed")
+    close_door()
+    time.sleep(10)
+    GPIO.add_event_detect(OpenButton,GPIO.FALLING,callback=manual_open,bouncetime=500)
+    GPIO.add_event_detect(CloseButton,GPIO.RISING,callback=manual_close,bouncetime=500)
     
 def main_loop():
+    GPIO.add_event_detect(OpenButton,GPIO.FALLING,callback=manual_open,bouncetime=500)
+    GPIO.add_event_detect(CloseButton,GPIO.RISING,callback=manual_close,bouncetime=500)
     while True:
-        for i in range(60):
-            if GPIO.input(OpenButton)==0:
-                print("Manually Opening")
-                logging.debug("Door Manually Opened")
-                open_door()
-                #time.sleep(0)
-            elif GPIO.input(CloseButton)==1:
-                print("Manually Closing")
-                logging.debug("Door Manually Closed")
-                close_door()
-                #time.sleep(0)
-            else:
-                time.sleep(1)       
         door()
-        
+        time.sleep(60)
+
 
 if __name__ == "__main__":
     try:

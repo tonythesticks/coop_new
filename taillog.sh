@@ -1,0 +1,1 @@
+tail -f /home/pi/projects/coop_new/coop.log

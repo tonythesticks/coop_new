@@ -1,0 +1,1240 @@
+2022-12-27 15:52:16,779 - INFO: Coop started
+2022-12-27 15:52:16,783 - INFO: The UTC time is: 2022-12-27 15:52:16.751549+00:00
+2022-12-27 15:52:20,316 - ERROR: ERROR, opening door took too long
+2022-12-27 15:52:20,892 - DEBUG: Doorstatus could not be determined but door should have been and is now open.
+2022-12-27 16:25:23,780 - WARNING: Closing door
+2022-12-27 16:25:27,094 - ERROR: ERROR, closing door took too long
+2022-12-27 16:26:27,933 - DEBUG: Door will open at 2022-12-28 08:28:00+00:00 UTC
+2022-12-27 16:26:27,939 - DEBUG: Door will close again 30 minutes after sunset at 2022-12-28 16:26:00+00:00 UTC
+2022-12-28 07:58:49,206 - WARNING: Opening door
+2022-12-28 07:58:52,735 - ERROR: ERROR, opening door took too long
+2022-12-28 07:59:53,372 - DEBUG: Door will open again at 2022-12-29 08:28:00+00:00 UTC
+2022-12-28 07:59:53,377 - DEBUG: Door will close 30 minutes after sunset at 2022-12-28 16:26:00+00:00 UTC
+2022-12-28 15:41:31,905 - INFO: Coop started
+2022-12-28 15:41:31,970 - INFO: The UTC time is: 2022-12-28 15:41:31.777915+00:00
+2022-12-28 15:41:35,511 - ERROR: ERROR, opening door took too long
+2022-12-28 15:41:36,235 - DEBUG: Doorstatus could not be determined but door should have been and is now open.
+2022-12-28 15:47:34,838 - DEBUG: Door Manually Opened
+2022-12-28 15:47:38,395 - ERROR: ERROR, opening door took too long
+2022-12-28 15:47:40,988 - DEBUG: Door Manually Opened
+2022-12-28 15:47:44,495 - ERROR: ERROR, opening door took too long
+2022-12-28 15:47:52,062 - DEBUG: Door Manually Opened
+2022-12-28 15:47:55,569 - ERROR: ERROR, opening door took too long
+2022-12-28 15:47:58,127 - DEBUG: Door Manually Opened
+2022-12-28 15:48:01,632 - ERROR: ERROR, opening door took too long
+2022-12-28 15:48:11,224 - DEBUG: Door Manually Closed
+2022-12-28 15:48:14,528 - ERROR: ERROR, closing door took too long
+2022-12-28 15:48:55,337 - DEBUG: Door Manually Closed
+2022-12-28 15:48:58,642 - ERROR: ERROR, closing door took too long
+2022-12-28 15:51:15,559 - DEBUG: Door Manually Closed
+2022-12-28 15:51:18,866 - ERROR: ERROR, closing door took too long
+2022-12-28 15:52:16,692 - DEBUG: Door Manually Closed
+2022-12-28 15:52:19,999 - ERROR: ERROR, closing door took too long
+2022-12-28 15:52:28,760 - DEBUG: Door Manually Closed
+2022-12-28 15:52:32,066 - ERROR: ERROR, closing door took too long
+2022-12-28 15:52:48,842 - DEBUG: Door Manually Opened
+2022-12-28 15:52:52,345 - ERROR: ERROR, opening door took too long
+2022-12-28 15:53:10,937 - DEBUG: Door Manually Closed
+2022-12-28 15:53:14,242 - ERROR: ERROR, closing door took too long
+2022-12-28 15:53:21,001 - DEBUG: Door Manually Opened
+2022-12-28 15:53:24,508 - ERROR: ERROR, opening door took too long
+2022-12-28 15:53:31,087 - DEBUG: Door Manually Closed
+2022-12-28 15:53:34,392 - ERROR: ERROR, closing door took too long
+2022-12-28 15:53:40,147 - DEBUG: Door Manually Opened
+2022-12-28 15:53:43,651 - ERROR: ERROR, opening door took too long
+2022-12-28 15:53:54,221 - DEBUG: Door Manually Opened
+2022-12-28 15:53:57,726 - ERROR: ERROR, opening door took too long
+2022-12-28 15:54:02,287 - DEBUG: Door Manually Opened
+2022-12-28 15:54:05,794 - ERROR: ERROR, opening door took too long
+2022-12-28 15:54:09,343 - DEBUG: Door Manually Closed
+2022-12-28 15:54:12,649 - ERROR: ERROR, closing door took too long
+2022-12-28 15:54:24,430 - DEBUG: Door Manually Opened
+2022-12-28 15:54:27,936 - ERROR: ERROR, opening door took too long
+2022-12-28 15:54:32,487 - DEBUG: Door Manually Closed
+2022-12-28 15:54:35,790 - ERROR: ERROR, closing door took too long
+2022-12-28 15:54:49,562 - DEBUG: Door Manually Opened
+2022-12-28 15:54:53,064 - ERROR: ERROR, opening door took too long
+2022-12-28 16:26:56,150 - WARNING: Closing door
+2022-12-28 16:26:59,457 - ERROR: ERROR, closing door took too long
+2022-12-28 16:28:00,262 - DEBUG: Door will open at 2022-12-29 08:28:00+00:00 UTC
+2022-12-28 16:28:00,285 - DEBUG: Door will close again 30 minutes after sunset at 2022-12-29 16:27:00+00:00 UTC
+2022-12-29 07:58:17,748 - WARNING: Opening door
+2022-12-29 07:58:21,323 - ERROR: ERROR, opening door took too long
+2022-12-29 07:59:21,982 - DEBUG: Door will open again at 2022-12-30 08:28:00+00:00 UTC
+2022-12-29 07:59:21,996 - DEBUG: Door will close 30 minutes after sunset at 2022-12-29 16:27:00+00:00 UTC
+2022-12-29 16:27:03,378 - WARNING: Closing door
+2022-12-29 16:27:06,689 - ERROR: ERROR, closing door took too long
+2022-12-29 16:28:07,452 - DEBUG: Door will open at 2022-12-30 08:28:00+00:00 UTC
+2022-12-29 16:28:07,455 - DEBUG: Door will close again 30 minutes after sunset at 2022-12-30 16:28:00+00:00 UTC
+2022-12-30 07:58:25,121 - WARNING: Opening door
+2022-12-30 07:58:28,648 - ERROR: ERROR, opening door took too long
+2022-12-30 07:59:29,273 - DEBUG: Door will open again at 2022-12-31 08:28:00+00:00 UTC
+2022-12-30 07:59:29,276 - DEBUG: Door will close 30 minutes after sunset at 2022-12-30 16:28:00+00:00 UTC
+2022-12-30 16:28:10,363 - WARNING: Closing door
+2022-12-30 16:28:13,670 - ERROR: ERROR, closing door took too long
+2022-12-30 16:29:14,489 - DEBUG: Door will open at 2022-12-31 08:28:00+00:00 UTC
+2022-12-30 16:29:14,497 - DEBUG: Door will close again 30 minutes after sunset at 2022-12-31 16:29:00+00:00 UTC
+2022-12-31 07:58:31,395 - WARNING: Opening door
+2022-12-31 07:58:34,908 - ERROR: ERROR, opening door took too long
+2022-12-31 07:59:35,514 - DEBUG: Door will open again at 2023-01-01 08:28:00+00:00 UTC
+2022-12-31 07:59:35,523 - DEBUG: Door will close 30 minutes after sunset at 2022-12-31 16:29:00+00:00 UTC
+2022-12-31 16:29:16,870 - WARNING: Closing door
+2022-12-31 16:29:20,176 - ERROR: ERROR, closing door took too long
+2022-12-31 16:30:20,999 - DEBUG: Door will open at 2023-01-01 08:28:00+00:00 UTC
+2022-12-31 16:30:21,007 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-01 16:30:00+00:00 UTC
+2023-01-01 07:58:39,528 - WARNING: Opening door
+2023-01-01 07:58:43,053 - ERROR: ERROR, opening door took too long
+2023-01-01 07:59:43,619 - DEBUG: Door will open again at 2023-01-02 08:28:00+00:00 UTC
+2023-01-01 07:59:43,625 - DEBUG: Door will close 30 minutes after sunset at 2023-01-01 16:30:00+00:00 UTC
+2023-01-01 15:46:22,150 - DEBUG: Door Manually Opened
+2023-01-01 15:46:25,657 - ERROR: ERROR, opening door took too long
+2023-01-01 15:46:28,207 - DEBUG: Door Manually Closed
+2023-01-01 15:46:31,513 - ERROR: ERROR, closing door took too long
+2023-01-01 15:47:16,314 - DEBUG: Door Manually Opened
+2023-01-01 15:47:19,821 - ERROR: ERROR, opening door took too long
+2023-01-01 15:47:25,377 - DEBUG: Door Manually Opened
+2023-01-01 15:47:28,882 - ERROR: ERROR, opening door took too long
+2023-01-01 15:47:42,452 - DEBUG: Door Manually Closed
+2023-01-01 15:47:45,757 - ERROR: ERROR, closing door took too long
+2023-01-01 15:47:53,510 - DEBUG: Door Manually Opened
+2023-01-01 15:47:57,013 - ERROR: ERROR, opening door took too long
+2023-01-01 16:30:43,075 - WARNING: Closing door
+2023-01-01 16:30:46,382 - ERROR: ERROR, closing door took too long
+2023-01-01 16:31:47,191 - DEBUG: Door will open at 2023-01-02 08:28:00+00:00 UTC
+2023-01-01 16:31:47,197 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-02 16:32:00+00:00 UTC
+2023-01-01 16:31:47,204 - DEBUG: Door Manually Closed
+2023-01-01 16:31:50,514 - ERROR: ERROR, closing door took too long
+2023-01-01 16:40:51,070 - DEBUG: Door Manually Opened
+2023-01-01 16:40:54,577 - ERROR: ERROR, opening door took too long
+2023-01-01 16:41:03,149 - DEBUG: Door Manually Closed
+2023-01-01 16:41:06,455 - ERROR: ERROR, closing door took too long
+2023-01-01 16:41:29,229 - DEBUG: Door Manually Opened
+2023-01-01 16:41:32,736 - ERROR: ERROR, opening door took too long
+2023-01-01 16:41:45,318 - DEBUG: Door Manually Closed
+2023-01-01 16:41:48,625 - ERROR: ERROR, closing door took too long
+2023-01-01 16:41:55,380 - DEBUG: Door Manually Opened
+2023-01-01 16:41:58,887 - ERROR: ERROR, opening door took too long
+2023-01-01 16:45:44,802 - DEBUG: Door Manually Opened
+2023-01-01 16:45:48,309 - ERROR: ERROR, opening door took too long
+2023-01-01 16:45:51,867 - DEBUG: Door Manually Closed
+2023-01-01 16:45:55,169 - ERROR: ERROR, closing door took too long
+2023-01-01 16:46:13,970 - DEBUG: Door Manually Opened
+2023-01-01 16:46:17,475 - ERROR: ERROR, opening door took too long
+2023-01-01 16:56:13,571 - INFO: Coop started
+2023-01-01 16:56:13,583 - INFO: The UTC time is: 2023-01-01 16:56:13.557750+00:00
+2023-01-01 16:56:16,588 - ERROR: ERROR, opening door took too long
+2023-01-01 16:56:19,437 - ERROR: ERROR, closing door took too long
+2023-01-01 16:56:19,682 - WARNING: Doorstatus could not be determined but door should have been and is now closed.
+2023-01-01 19:39:58,273 - DEBUG: Door Manually Opened
+2023-01-01 19:40:01,283 - ERROR: ERROR, opening door took too long
+2023-01-01 19:40:06,329 - DEBUG: Door Manually Closed
+2023-01-01 19:40:09,138 - ERROR: ERROR, closing door took too long
+2023-01-01 19:40:16,402 - DEBUG: Door Manually Opened
+2023-01-01 19:40:19,412 - ERROR: ERROR, opening door took too long
+2023-01-01 19:40:24,500 - DEBUG: Door Manually Opened
+2023-01-01 19:40:27,509 - ERROR: ERROR, opening door took too long
+2023-01-01 19:40:29,575 - DEBUG: Door Manually Closed
+2023-01-01 19:40:32,391 - ERROR: ERROR, closing door took too long
+2023-01-02 07:58:47,798 - WARNING: Opening door
+2023-01-02 07:58:50,810 - ERROR: ERROR, opening door took too long
+2023-01-02 07:59:50,931 - DEBUG: Door will open again at 2023-01-03 08:28:00+00:00 UTC
+2023-01-02 07:59:50,937 - DEBUG: Door will close 30 minutes after sunset at 2023-01-02 16:32:00+00:00 UTC
+2023-01-02 09:04:41,170 - INFO: Coop started
+2023-01-02 09:04:41,193 - INFO: The UTC time is: 2023-01-02 09:04:41.156010+00:00
+2023-01-02 09:04:44,252 - DEBUG: Doorstatus could not be determined but door should have been and is now open.
+2023-01-02 09:05:13,295 - DEBUG: Door Manually Closed
+2023-01-02 09:05:19,356 - DEBUG: Door Manually Opened
+2023-01-02 09:06:27,338 - INFO: Coop started
+2023-01-02 09:06:27,353 - INFO: The UTC time is: 2023-01-02 09:06:27.324754+00:00
+2023-01-02 09:06:30,413 - DEBUG: Doorstatus could not be determined but door should have been and is now open.
+2023-01-02 09:07:45,519 - DEBUG: Door Manually Closed
+2023-01-02 09:07:48,557 - DEBUG: Door Manually Closed
+2023-01-02 09:08:00,609 - DEBUG: Door Manually Closed
+2023-01-02 09:08:12,658 - DEBUG: Door Manually Closed
+2023-01-02 09:08:56,088 - INFO: Coop started
+2023-01-02 09:08:56,103 - INFO: The UTC time is: 2023-01-02 09:08:56.074750+00:00
+2023-01-02 09:08:59,215 - DEBUG: Doorstatus could not be determined but door should have been and is now open.
+2023-01-02 09:09:19,244 - DEBUG: Door Manually Closed
+2023-01-02 09:09:19,832 - DEBUG: Door Manually Closed
+2023-01-02 09:09:28,318 - DEBUG: Door Manually Opened
+2023-01-02 09:11:18,884 - INFO: Coop started
+2023-01-02 09:11:18,903 - INFO: The UTC time is: 2023-01-02 09:11:18.868866+00:00
+2023-01-02 09:11:20,976 - DEBUG: Doorstatus could not be determined but door should have been and is now open.
+2023-01-02 09:11:44,007 - DEBUG: Door Manually Closed
+2023-01-02 09:11:48,636 - DEBUG: Door Manually Closed
+2023-01-02 09:12:00,717 - DEBUG: Door Manually Opened
+2023-01-02 09:12:01,074 - DEBUG: Door Manually Opened
+2023-01-02 09:12:10,160 - DEBUG: Door Manually Opened
+2023-01-02 09:12:16,217 - DEBUG: Door Manually Closed
+2023-01-02 09:12:22,831 - DEBUG: Door Manually Closed
+2023-01-02 09:12:33,313 - DEBUG: Door Manually Opened
+2023-01-02 09:12:35,918 - DEBUG: Door Manually Opened
+2023-01-02 09:18:34,089 - INFO: Coop started
+2023-01-02 09:18:34,103 - INFO: The UTC time is: 2023-01-02 09:18:34.076562+00:00
+2023-01-02 09:18:35,634 - DEBUG: Doorstatus could not be determined but door should have been and is now open.
+2023-01-02 09:19:28,890 - DEBUG: Door Manually Closed
+2023-01-02 09:19:35,942 - DEBUG: Door Manually Opened
+2023-01-02 09:19:39,736 - DEBUG: Door Manually Opened
+2023-01-02 09:19:40,016 - DEBUG: Door Manually Opened
+2023-01-02 09:19:43,090 - DEBUG: Door Manually Opened
+2023-01-02 09:19:43,266 - DEBUG: Door Manually Opened
+2023-01-02 09:19:47,149 - DEBUG: Door Manually Opened
+2023-01-02 09:20:01,836 - DEBUG: Door Manually Opened
+2023-01-02 09:20:33,271 - DEBUG: Door Manually Closed
+2023-01-02 09:20:33,407 - DEBUG: Door Manually Closed
+2023-01-02 09:21:20,388 - DEBUG: Door Manually Opened
+2023-01-02 09:21:20,507 - DEBUG: Door Manually Opened
+2023-01-02 09:21:23,037 - DEBUG: Door Manually Closed
+2023-01-02 09:21:24,066 - DEBUG: Door Manually Opened
+2023-01-02 09:21:38,494 - DEBUG: Door Manually Opened
+2023-01-02 09:21:38,653 - DEBUG: Door Manually Opened
+2023-01-02 09:21:41,171 - DEBUG: Door Manually Opened
+2023-01-02 09:21:41,566 - DEBUG: Door Manually Opened
+2023-01-02 09:29:07,257 - DEBUG: Door Manually Opened
+2023-01-02 09:29:07,330 - DEBUG: Door Manually Opened
+2023-01-02 09:29:40,913 - DEBUG: Door Manually Closed
+2023-01-02 09:29:44,400 - DEBUG: Door Manually Closed
+2023-01-02 09:29:53,945 - DEBUG: Door Manually Opened
+2023-01-02 09:29:58,459 - DEBUG: Door Manually Opened
+2023-01-02 09:29:58,503 - DEBUG: Door Manually Opened
+2023-01-02 09:34:06,910 - DEBUG: Door Manually Closed
+2023-01-02 09:34:11,952 - DEBUG: Door Manually Opened
+2023-01-02 09:34:18,450 - DEBUG: Door Manually Closed
+2023-01-02 09:34:22,498 - DEBUG: Door Manually Opened
+2023-01-02 09:34:34,041 - DEBUG: Door Manually Closed
+2023-01-02 09:34:34,054 - DEBUG: Door Manually Closed
+2023-01-02 09:54:15,738 - DEBUG: Door Manually Opened
+2023-01-02 09:54:15,803 - DEBUG: Door Manually Opened
+2023-01-02 10:00:20,778 - DEBUG: Door Manually Closed
+2023-01-02 10:00:22,802 - DEBUG: Door Manually Opened
+2023-01-02 10:00:46,375 - DEBUG: Door Manually Closed
+2023-01-02 10:00:46,463 - DEBUG: Door Manually Closed
+2023-01-02 10:10:55,266 - DEBUG: Door Manually Opened
+2023-01-02 10:10:55,427 - DEBUG: Door Manually Opened
+2023-01-02 10:17:07,044 - DEBUG: Door Manually Closed
+2023-01-02 10:17:07,313 - DEBUG: Door Manually Closed
+2023-01-02 10:17:08,376 - DEBUG: Door Manually Closed
+2023-01-02 10:17:09,406 - DEBUG: Door Manually Closed
+2023-01-02 10:17:10,144 - DEBUG: Door Manually Closed
+2023-01-02 10:17:10,444 - DEBUG: Door Manually Closed
+2023-01-02 10:17:11,456 - DEBUG: Door Manually Closed
+2023-01-02 10:17:12,537 - DEBUG: Door Manually Closed
+2023-01-02 10:17:13,216 - DEBUG: Door Manually Closed
+2023-01-02 10:17:13,556 - DEBUG: Door Manually Closed
+2023-01-02 10:17:14,606 - DEBUG: Door Manually Closed
+2023-01-02 10:17:15,652 - DEBUG: Door Manually Closed
+2023-01-02 10:17:16,331 - DEBUG: Door Manually Closed
+2023-01-02 10:17:16,704 - DEBUG: Door Manually Closed
+2023-01-02 10:17:17,736 - DEBUG: Door Manually Closed
+2023-01-02 10:17:18,766 - DEBUG: Door Manually Closed
+2023-01-02 10:17:19,424 - DEBUG: Door Manually Closed
+2023-01-02 10:17:19,813 - DEBUG: Door Manually Closed
+2023-01-02 10:17:20,834 - DEBUG: Door Manually Closed
+2023-01-02 10:17:21,872 - DEBUG: Door Manually Closed
+2023-01-02 10:17:22,509 - DEBUG: Door Manually Closed
+2023-01-02 10:17:22,896 - DEBUG: Door Manually Closed
+2023-01-02 10:17:23,923 - DEBUG: Door Manually Closed
+2023-01-02 10:17:24,953 - DEBUG: Door Manually Closed
+2023-01-02 10:17:25,604 - DEBUG: Door Manually Closed
+2023-01-02 10:17:25,974 - DEBUG: Door Manually Closed
+2023-01-02 10:17:26,996 - DEBUG: Door Manually Closed
+2023-01-02 10:17:28,037 - DEBUG: Door Manually Closed
+2023-01-02 10:17:28,674 - DEBUG: Door Manually Closed
+2023-01-02 10:17:29,063 - DEBUG: Door Manually Closed
+2023-01-02 10:17:30,076 - DEBUG: Door Manually Closed
+2023-01-02 10:17:31,107 - DEBUG: Door Manually Closed
+2023-01-02 10:17:31,774 - DEBUG: Door Manually Closed
+2023-01-02 10:17:32,132 - DEBUG: Door Manually Closed
+2023-01-02 10:17:33,162 - DEBUG: Door Manually Closed
+2023-01-02 10:17:34,186 - DEBUG: Door Manually Closed
+2023-01-02 10:17:34,844 - DEBUG: Door Manually Closed
+2023-01-02 10:17:35,208 - DEBUG: Door Manually Closed
+2023-01-02 10:17:36,238 - DEBUG: Door Manually Closed
+2023-01-02 10:17:37,267 - DEBUG: Door Manually Closed
+2023-01-02 10:17:37,933 - DEBUG: Door Manually Closed
+2023-01-02 10:17:38,287 - DEBUG: Door Manually Closed
+2023-01-02 10:17:39,306 - DEBUG: Door Manually Closed
+2023-01-02 10:17:40,347 - DEBUG: Door Manually Closed
+2023-01-02 10:17:41,013 - DEBUG: Door Manually Closed
+2023-01-02 10:17:41,392 - DEBUG: Door Manually Closed
+2023-01-02 10:17:42,409 - DEBUG: Door Manually Closed
+2023-01-02 10:17:43,451 - DEBUG: Door Manually Opened
+2023-01-02 10:17:44,113 - DEBUG: Door Manually Opened
+2023-01-02 10:17:44,968 - DEBUG: Door Manually Closed
+2023-01-02 10:17:45,992 - DEBUG: Door Manually Closed
+2023-01-02 10:17:47,021 - DEBUG: Door Manually Closed
+2023-01-02 10:17:47,192 - DEBUG: Door Manually Closed
+2023-01-02 10:17:48,036 - DEBUG: Door Manually Closed
+2023-01-02 10:17:49,067 - DEBUG: Door Manually Closed
+2023-01-02 10:17:50,087 - DEBUG: Door Manually Closed
+2023-01-02 10:17:50,261 - DEBUG: Door Manually Closed
+2023-01-02 10:17:51,112 - DEBUG: Door Manually Closed
+2023-01-02 10:17:52,132 - DEBUG: Door Manually Closed
+2023-01-02 10:17:53,152 - DEBUG: Door Manually Closed
+2023-01-02 10:17:53,351 - DEBUG: Door Manually Closed
+2023-01-02 10:17:54,182 - DEBUG: Door Manually Closed
+2023-01-02 10:17:55,196 - DEBUG: Door Manually Closed
+2023-01-02 10:17:56,212 - DEBUG: Door Manually Closed
+2023-01-02 10:17:56,416 - DEBUG: Door Manually Closed
+2023-01-02 10:17:57,252 - DEBUG: Door Manually Closed
+2023-01-02 10:17:58,293 - DEBUG: Door Manually Closed
+2023-01-02 10:17:59,304 - DEBUG: Door Manually Closed
+2023-01-02 10:17:59,482 - DEBUG: Door Manually Closed
+2023-01-02 10:18:00,332 - DEBUG: Door Manually Closed
+2023-01-02 10:18:01,347 - DEBUG: Door Manually Closed
+2023-01-02 10:18:02,356 - DEBUG: Door Manually Closed
+2023-01-02 10:18:02,602 - DEBUG: Door Manually Closed
+2023-01-02 10:18:03,367 - DEBUG: Door Manually Closed
+2023-01-02 10:18:04,384 - DEBUG: Door Manually Closed
+2023-01-02 10:18:05,398 - DEBUG: Door Manually Closed
+2023-01-02 10:18:05,660 - DEBUG: Door Manually Closed
+2023-01-02 10:18:06,413 - DEBUG: Door Manually Closed
+2023-01-02 10:18:07,447 - DEBUG: Door Manually Closed
+2023-01-02 10:18:08,478 - DEBUG: Door Manually Closed
+2023-01-02 10:18:08,782 - DEBUG: Door Manually Closed
+2023-01-02 10:18:09,507 - DEBUG: Door Manually Closed
+2023-01-02 10:18:10,554 - DEBUG: Door Manually Closed
+2023-01-02 10:18:11,567 - DEBUG: Door Manually Closed
+2023-01-02 10:18:11,862 - DEBUG: Door Manually Closed
+2023-01-02 10:18:12,592 - DEBUG: Door Manually Closed
+2023-01-02 10:18:13,632 - DEBUG: Door Manually Closed
+2023-01-02 10:18:14,643 - DEBUG: Door Manually Closed
+2023-01-02 10:18:14,949 - DEBUG: Door Manually Closed
+2023-01-02 10:18:15,684 - DEBUG: Door Manually Closed
+2023-01-02 10:18:16,723 - DEBUG: Door Manually Closed
+2023-01-02 10:18:17,731 - DEBUG: Door Manually Closed
+2023-01-02 10:18:18,054 - DEBUG: Door Manually Closed
+2023-01-02 10:18:18,746 - DEBUG: Door Manually Closed
+2023-01-02 10:18:19,786 - DEBUG: Door Manually Closed
+2023-01-02 10:18:20,813 - DEBUG: Door Manually Closed
+2023-01-02 10:18:21,132 - DEBUG: Door Manually Closed
+2023-01-02 10:18:21,834 - DEBUG: Door Manually Closed
+2023-01-02 10:18:22,861 - DEBUG: Door Manually Closed
+2023-01-02 10:18:23,870 - DEBUG: Door Manually Closed
+2023-01-02 10:18:24,264 - DEBUG: Door Manually Closed
+2023-01-02 10:18:24,896 - DEBUG: Door Manually Closed
+2023-01-02 10:18:25,922 - DEBUG: Door Manually Closed
+2023-01-02 10:18:26,942 - DEBUG: Door Manually Closed
+2023-01-02 10:18:27,331 - DEBUG: Door Manually Closed
+2023-01-02 10:18:27,959 - DEBUG: Door Manually Closed
+2023-01-02 10:18:29,006 - DEBUG: Door Manually Closed
+2023-01-02 10:18:30,032 - DEBUG: Door Manually Closed
+2023-01-02 10:18:30,452 - DEBUG: Door Manually Closed
+2023-01-02 10:18:31,056 - DEBUG: Door Manually Closed
+2023-01-02 10:18:32,101 - DEBUG: Door Manually Closed
+2023-01-02 10:18:33,110 - DEBUG: Door Manually Closed
+2023-01-02 10:18:33,562 - DEBUG: Door Manually Closed
+2023-01-02 10:18:34,134 - DEBUG: Door Manually Closed
+2023-01-02 10:18:35,206 - DEBUG: Door Manually Closed
+2023-01-02 10:18:36,231 - DEBUG: Door Manually Closed
+2023-01-02 10:18:36,649 - DEBUG: Door Manually Closed
+2023-01-02 10:18:37,251 - DEBUG: Door Manually Closed
+2023-01-02 10:18:38,286 - DEBUG: Door Manually Closed
+2023-01-02 10:18:39,322 - DEBUG: Door Manually Closed
+2023-01-02 10:18:39,754 - DEBUG: Door Manually Closed
+2023-01-02 10:18:40,342 - DEBUG: Door Manually Closed
+2023-01-02 10:18:41,366 - DEBUG: Door Manually Closed
+2023-01-02 10:18:42,402 - DEBUG: Door Manually Closed
+2023-01-02 10:18:42,864 - DEBUG: Door Manually Closed
+2023-01-02 10:18:43,437 - DEBUG: Door Manually Closed
+2023-01-02 10:18:44,463 - DEBUG: Door Manually Closed
+2023-01-02 10:18:45,475 - DEBUG: Door Manually Closed
+2023-01-02 10:18:45,964 - DEBUG: Door Manually Closed
+2023-01-02 10:18:46,512 - DEBUG: Door Manually Closed
+2023-01-02 10:18:47,522 - DEBUG: Door Manually Closed
+2023-01-02 10:18:48,538 - DEBUG: Door Manually Closed
+2023-01-02 10:18:49,051 - DEBUG: Door Manually Closed
+2023-01-02 10:18:49,563 - DEBUG: Door Manually Closed
+2023-01-02 10:18:50,603 - DEBUG: Door Manually Closed
+2023-01-02 10:18:51,662 - DEBUG: Door Manually Closed
+2023-01-02 10:18:52,151 - DEBUG: Door Manually Closed
+2023-01-02 10:18:52,696 - DEBUG: Door Manually Closed
+2023-01-02 10:18:53,743 - DEBUG: Door Manually Closed
+2023-01-02 10:18:54,761 - DEBUG: Door Manually Closed
+2023-01-02 10:18:55,230 - DEBUG: Door Manually Closed
+2023-01-02 10:18:55,792 - DEBUG: Door Manually Closed
+2023-01-02 10:18:56,808 - DEBUG: Door Manually Closed
+2023-01-02 10:18:57,826 - DEBUG: Door Manually Closed
+2023-01-02 10:18:58,334 - DEBUG: Door Manually Closed
+2023-01-02 10:18:58,857 - DEBUG: Door Manually Closed
+2023-01-02 10:18:59,913 - DEBUG: Door Manually Closed
+2023-01-02 10:19:00,922 - DEBUG: Door Manually Closed
+2023-01-02 10:19:01,397 - DEBUG: Door Manually Closed
+2023-01-02 10:19:01,963 - DEBUG: Door Manually Closed
+2023-01-02 10:19:02,981 - DEBUG: Door Manually Closed
+2023-01-02 10:19:04,000 - DEBUG: Door Manually Closed
+2023-01-02 10:19:04,517 - DEBUG: Door Manually Closed
+2023-01-02 10:19:05,011 - DEBUG: Door Manually Closed
+2023-01-02 10:19:06,032 - DEBUG: Door Manually Closed
+2023-01-02 10:19:07,050 - DEBUG: Door Manually Closed
+2023-01-02 10:19:07,591 - DEBUG: Door Manually Closed
+2023-01-02 10:19:08,077 - DEBUG: Door Manually Closed
+2023-01-02 10:19:09,089 - DEBUG: Door Manually Closed
+2023-01-02 10:19:10,118 - DEBUG: Door Manually Closed
+2023-01-02 10:19:10,672 - DEBUG: Door Manually Closed
+2023-01-02 10:19:11,137 - DEBUG: Door Manually Closed
+2023-01-02 10:19:12,183 - DEBUG: Door Manually Closed
+2023-01-02 10:19:13,195 - DEBUG: Door Manually Closed
+2023-01-02 10:19:13,752 - DEBUG: Door Manually Closed
+2023-01-02 10:19:14,206 - DEBUG: Door Manually Closed
+2023-01-02 10:19:15,248 - DEBUG: Door Manually Closed
+2023-01-02 10:19:16,262 - DEBUG: Door Manually Closed
+2023-01-02 10:19:16,884 - DEBUG: Door Manually Closed
+2023-01-02 10:19:17,312 - DEBUG: Door Manually Closed
+2023-01-02 10:19:18,352 - DEBUG: Door Manually Closed
+2023-01-02 10:19:19,368 - DEBUG: Door Manually Closed
+2023-01-02 10:19:19,993 - DEBUG: Door Manually Closed
+2023-01-02 10:19:20,403 - DEBUG: Door Manually Closed
+2023-01-02 10:19:21,434 - DEBUG: Door Manually Closed
+2023-01-02 10:19:22,454 - DEBUG: Door Manually Closed
+2023-01-02 10:19:23,052 - DEBUG: Door Manually Closed
+2023-01-02 10:19:23,486 - DEBUG: Door Manually Closed
+2023-01-02 10:19:24,516 - DEBUG: Door Manually Closed
+2023-01-02 10:19:25,536 - DEBUG: Door Manually Closed
+2023-01-02 10:19:26,173 - DEBUG: Door Manually Closed
+2023-01-02 10:19:26,576 - DEBUG: Door Manually Closed
+2023-01-02 10:19:27,623 - DEBUG: Door Manually Closed
+2023-01-02 10:19:28,631 - DEBUG: Door Manually Closed
+2023-01-02 10:19:29,325 - DEBUG: Door Manually Closed
+2023-01-02 10:19:29,673 - DEBUG: Door Manually Closed
+2023-01-02 10:19:30,703 - DEBUG: Door Manually Closed
+2023-01-02 10:19:31,717 - DEBUG: Door Manually Closed
+2023-01-02 10:19:32,388 - DEBUG: Door Manually Closed
+2023-01-02 10:19:32,747 - DEBUG: Door Manually Closed
+2023-01-02 10:19:33,765 - DEBUG: Door Manually Closed
+2023-01-02 10:19:34,807 - DEBUG: Door Manually Closed
+2023-01-02 10:19:35,500 - DEBUG: Door Manually Closed
+2023-01-02 10:19:35,851 - DEBUG: Door Manually Closed
+2023-01-02 10:19:36,894 - DEBUG: Door Manually Closed
+2023-01-02 10:19:37,937 - DEBUG: Door Manually Closed
+2023-01-02 10:19:38,602 - DEBUG: Door Manually Closed
+2023-01-02 10:19:38,973 - DEBUG: Door Manually Closed
+2023-01-02 10:19:40,003 - DEBUG: Door Manually Closed
+2023-01-02 10:19:41,013 - DEBUG: Door Manually Closed
+2023-01-02 10:19:41,683 - DEBUG: Door Manually Closed
+2023-01-02 10:19:42,043 - DEBUG: Door Manually Closed
+2023-01-02 10:19:43,066 - DEBUG: Door Manually Closed
+2023-01-02 10:19:44,078 - DEBUG: Door Manually Closed
+2023-01-02 10:19:44,764 - DEBUG: Door Manually Closed
+2023-01-02 10:19:45,116 - DEBUG: Door Manually Closed
+2023-01-02 10:19:46,152 - DEBUG: Door Manually Closed
+2023-01-02 10:19:47,176 - DEBUG: Door Manually Closed
+2023-01-02 10:19:47,848 - DEBUG: Door Manually Closed
+2023-01-02 10:19:48,212 - DEBUG: Door Manually Closed
+2023-01-02 10:19:49,233 - DEBUG: Door Manually Closed
+2023-01-02 10:19:50,247 - DEBUG: Door Manually Closed
+2023-01-02 10:19:50,969 - DEBUG: Door Manually Closed
+2023-01-02 10:19:51,282 - DEBUG: Door Manually Closed
+2023-01-02 10:19:52,304 - DEBUG: Door Manually Closed
+2023-01-02 10:19:53,347 - DEBUG: Door Manually Closed
+2023-01-02 10:19:54,055 - DEBUG: Door Manually Closed
+2023-01-02 10:19:54,366 - DEBUG: Door Manually Closed
+2023-01-02 10:19:55,392 - DEBUG: Door Manually Closed
+2023-01-02 10:19:56,405 - DEBUG: Door Manually Closed
+2023-01-02 10:19:57,139 - DEBUG: Door Manually Closed
+2023-01-02 10:19:57,434 - DEBUG: Door Manually Closed
+2023-01-02 10:19:58,462 - DEBUG: Door Manually Closed
+2023-01-02 10:19:59,492 - DEBUG: Door Manually Closed
+2023-01-02 10:20:00,188 - DEBUG: Door Manually Closed
+2023-01-02 10:20:00,509 - DEBUG: Door Manually Closed
+2023-01-02 10:20:01,520 - DEBUG: Door Manually Closed
+2023-01-02 10:20:02,556 - DEBUG: Door Manually Closed
+2023-01-02 10:20:03,296 - DEBUG: Door Manually Closed
+2023-01-02 10:20:03,586 - DEBUG: Door Manually Closed
+2023-01-02 10:20:04,636 - DEBUG: Door Manually Closed
+2023-01-02 10:20:05,666 - DEBUG: Door Manually Closed
+2023-01-02 10:20:06,390 - DEBUG: Door Manually Closed
+2023-01-02 10:20:06,706 - DEBUG: Door Manually Closed
+2023-01-02 10:20:07,748 - DEBUG: Door Manually Closed
+2023-01-02 10:20:08,776 - DEBUG: Door Manually Closed
+2023-01-02 10:20:09,463 - DEBUG: Door Manually Closed
+2023-01-02 10:20:09,804 - DEBUG: Door Manually Closed
+2023-01-02 10:20:10,842 - DEBUG: Door Manually Closed
+2023-01-02 10:20:11,865 - DEBUG: Door Manually Closed
+2023-01-02 10:20:12,533 - DEBUG: Door Manually Closed
+2023-01-02 10:20:12,902 - DEBUG: Door Manually Closed
+2023-01-02 10:20:13,932 - DEBUG: Door Manually Closed
+2023-01-02 10:20:14,953 - DEBUG: Door Manually Closed
+2023-01-02 10:20:15,624 - DEBUG: Door Manually Closed
+2023-01-02 10:20:15,966 - DEBUG: Door Manually Closed
+2023-01-02 10:20:17,032 - DEBUG: Door Manually Closed
+2023-01-02 10:20:18,069 - DEBUG: Door Manually Closed
+2023-01-02 10:20:18,712 - DEBUG: Door Manually Closed
+2023-01-02 10:20:19,102 - DEBUG: Door Manually Closed
+2023-01-02 10:20:20,132 - DEBUG: Door Manually Closed
+2023-01-02 10:20:21,149 - DEBUG: Door Manually Closed
+2023-01-02 10:20:21,815 - DEBUG: Door Manually Closed
+2023-01-02 10:20:22,184 - DEBUG: Door Manually Closed
+2023-01-02 10:20:23,206 - DEBUG: Door Manually Closed
+2023-01-02 10:20:24,238 - DEBUG: Door Manually Closed
+2023-01-02 10:20:24,903 - DEBUG: Door Manually Closed
+2023-01-02 10:20:25,254 - DEBUG: Door Manually Closed
+2023-01-02 10:20:26,276 - DEBUG: Door Manually Closed
+2023-01-02 10:20:27,324 - DEBUG: Door Manually Closed
+2023-01-02 10:20:27,998 - DEBUG: Door Manually Closed
+2023-01-02 10:20:28,366 - DEBUG: Door Manually Closed
+2023-01-02 10:20:29,395 - DEBUG: Door Manually Closed
+2023-01-02 10:20:30,433 - DEBUG: Door Manually Closed
+2023-01-02 10:20:31,090 - DEBUG: Door Manually Closed
+2023-01-02 10:20:31,452 - DEBUG: Door Manually Closed
+2023-01-02 10:20:32,502 - DEBUG: Door Manually Closed
+2023-01-02 10:20:33,523 - DEBUG: Door Manually Closed
+2023-01-02 10:20:34,183 - DEBUG: Door Manually Closed
+2023-01-02 10:20:34,539 - DEBUG: Door Manually Closed
+2023-01-02 10:20:35,572 - DEBUG: Door Manually Closed
+2023-01-02 10:20:36,594 - DEBUG: Door Manually Closed
+2023-01-02 10:20:37,277 - DEBUG: Door Manually Closed
+2023-01-02 10:20:37,624 - DEBUG: Door Manually Closed
+2023-01-02 10:20:38,651 - DEBUG: Door Manually Closed
+2023-01-02 10:20:39,682 - DEBUG: Door Manually Closed
+2023-01-02 10:20:40,353 - DEBUG: Door Manually Closed
+2023-01-02 10:20:40,716 - DEBUG: Door Manually Closed
+2023-01-02 10:20:41,752 - DEBUG: Door Manually Closed
+2023-01-02 10:20:42,822 - DEBUG: Door Manually Closed
+2023-01-02 10:20:43,452 - DEBUG: Door Manually Closed
+2023-01-02 10:20:43,844 - DEBUG: Door Manually Closed
+2023-01-02 10:20:44,872 - DEBUG: Door Manually Closed
+2023-01-02 10:20:45,895 - DEBUG: Door Manually Closed
+2023-01-02 10:20:46,565 - DEBUG: Door Manually Closed
+2023-01-02 10:20:46,924 - DEBUG: Door Manually Closed
+2023-01-02 10:20:47,956 - DEBUG: Door Manually Closed
+2023-01-02 10:20:49,013 - DEBUG: Door Manually Closed
+2023-01-02 10:20:49,648 - DEBUG: Door Manually Closed
+2023-01-02 10:20:50,036 - DEBUG: Door Manually Closed
+2023-01-02 10:20:51,062 - DEBUG: Door Manually Closed
+2023-01-02 10:20:52,082 - DEBUG: Door Manually Closed
+2023-01-02 10:20:52,743 - DEBUG: Door Manually Closed
+2023-01-02 10:20:53,106 - DEBUG: Door Manually Closed
+2023-01-02 10:20:54,127 - DEBUG: Door Manually Closed
+2023-01-02 10:20:55,163 - DEBUG: Door Manually Closed
+2023-01-02 10:20:55,838 - DEBUG: Door Manually Closed
+2023-01-02 10:20:56,212 - DEBUG: Door Manually Closed
+2023-01-02 10:20:57,222 - DEBUG: Door Manually Closed
+2023-01-02 10:20:58,264 - DEBUG: Door Manually Closed
+2023-01-02 10:20:58,938 - DEBUG: Door Manually Closed
+2023-01-02 10:20:59,287 - DEBUG: Door Manually Closed
+2023-01-02 10:21:00,314 - DEBUG: Door Manually Closed
+2023-01-02 10:21:01,345 - DEBUG: Door Manually Closed
+2023-01-02 10:21:02,024 - DEBUG: Door Manually Closed
+2023-01-02 10:21:02,382 - DEBUG: Door Manually Closed
+2023-01-02 10:21:03,418 - DEBUG: Door Manually Closed
+2023-01-02 10:21:04,449 - DEBUG: Door Manually Closed
+2023-01-02 10:21:05,083 - DEBUG: Door Manually Closed
+2023-01-02 10:21:05,476 - DEBUG: Door Manually Closed
+2023-01-02 10:21:06,492 - DEBUG: Door Manually Closed
+2023-01-02 10:21:07,517 - DEBUG: Door Manually Closed
+2023-01-02 10:21:08,179 - DEBUG: Door Manually Closed
+2023-01-02 10:21:08,530 - DEBUG: Door Manually Closed
+2023-01-02 10:21:09,547 - DEBUG: Door Manually Closed
+2023-01-02 10:21:10,563 - DEBUG: Door Manually Closed
+2023-01-02 10:21:11,247 - DEBUG: Door Manually Closed
+2023-01-02 10:21:11,606 - DEBUG: Door Manually Closed
+2023-01-02 10:21:12,636 - DEBUG: Door Manually Closed
+2023-01-02 10:21:13,682 - DEBUG: Door Manually Closed
+2023-01-02 10:21:14,343 - DEBUG: Door Manually Closed
+2023-01-02 10:21:14,704 - DEBUG: Door Manually Closed
+2023-01-02 10:21:15,733 - DEBUG: Door Manually Closed
+2023-01-02 10:21:16,747 - DEBUG: Door Manually Closed
+2023-01-02 10:21:17,469 - DEBUG: Door Manually Closed
+2023-01-02 10:21:17,774 - DEBUG: Door Manually Closed
+2023-01-02 10:21:18,786 - DEBUG: Door Manually Closed
+2023-01-02 10:21:19,812 - DEBUG: Door Manually Closed
+2023-01-02 10:21:20,540 - DEBUG: Door Manually Closed
+2023-01-02 10:21:20,847 - DEBUG: Door Manually Closed
+2023-01-02 10:21:21,876 - DEBUG: Door Manually Closed
+2023-01-02 10:21:22,916 - DEBUG: Door Manually Closed
+2023-01-02 10:21:23,626 - DEBUG: Door Manually Closed
+2023-01-02 10:21:23,952 - DEBUG: Door Manually Closed
+2023-01-02 10:21:24,981 - DEBUG: Door Manually Closed
+2023-01-02 10:21:26,026 - DEBUG: Door Manually Closed
+2023-01-02 10:21:26,679 - DEBUG: Door Manually Closed
+2023-01-02 10:21:27,047 - DEBUG: Door Manually Closed
+2023-01-02 10:21:28,104 - DEBUG: Door Manually Closed
+2023-01-02 10:21:29,143 - DEBUG: Door Manually Closed
+2023-01-02 10:21:29,765 - DEBUG: Door Manually Closed
+2023-01-02 10:21:30,153 - DEBUG: Door Manually Closed
+2023-01-02 10:21:31,182 - DEBUG: Door Manually Closed
+2023-01-02 10:21:32,196 - DEBUG: Door Manually Closed
+2023-01-02 10:21:32,872 - DEBUG: Door Manually Closed
+2023-01-02 10:21:33,226 - DEBUG: Door Manually Closed
+2023-01-02 10:21:34,263 - DEBUG: Door Manually Closed
+2023-01-02 10:21:35,306 - DEBUG: Door Manually Closed
+2023-01-02 10:21:35,986 - DEBUG: Door Manually Closed
+2023-01-02 10:21:36,326 - DEBUG: Door Manually Closed
+2023-01-02 10:21:37,362 - DEBUG: Door Manually Closed
+2023-01-02 10:21:38,397 - DEBUG: Door Manually Closed
+2023-01-02 10:21:39,106 - DEBUG: Door Manually Closed
+2023-01-02 10:21:39,426 - DEBUG: Door Manually Closed
+2023-01-02 10:21:40,462 - DEBUG: Door Manually Closed
+2023-01-02 10:21:41,484 - DEBUG: Door Manually Closed
+2023-01-02 10:21:42,203 - DEBUG: Door Manually Closed
+2023-01-02 10:21:42,506 - DEBUG: Door Manually Closed
+2023-01-02 10:21:43,541 - DEBUG: Door Manually Closed
+2023-01-02 10:21:44,563 - DEBUG: Door Manually Closed
+2023-01-02 10:21:45,274 - DEBUG: Door Manually Closed
+2023-01-02 10:21:45,577 - DEBUG: Door Manually Closed
+2023-01-02 10:21:46,607 - DEBUG: Door Manually Closed
+2023-01-02 10:21:47,656 - DEBUG: Door Manually Closed
+2023-01-02 10:21:48,349 - DEBUG: Door Manually Closed
+2023-01-02 10:21:48,686 - DEBUG: Door Manually Closed
+2023-01-02 10:21:49,737 - DEBUG: Door Manually Closed
+2023-01-02 10:21:50,754 - DEBUG: Door Manually Closed
+2023-01-02 10:21:51,440 - DEBUG: Door Manually Closed
+2023-01-02 10:21:51,770 - DEBUG: Door Manually Closed
+2023-01-02 10:21:52,786 - DEBUG: Door Manually Closed
+2023-01-02 10:21:53,806 - DEBUG: Door Manually Closed
+2023-01-02 10:21:54,529 - DEBUG: Door Manually Closed
+2023-01-02 10:21:54,836 - DEBUG: Door Manually Closed
+2023-01-02 10:21:55,872 - DEBUG: Door Manually Closed
+2023-01-02 10:21:56,907 - DEBUG: Door Manually Closed
+2023-01-02 10:21:57,601 - DEBUG: Door Manually Closed
+2023-01-02 10:21:57,934 - DEBUG: Door Manually Closed
+2023-01-02 10:21:58,981 - DEBUG: Door Manually Closed
+2023-01-02 10:22:00,000 - DEBUG: Door Manually Closed
+2023-01-02 10:22:00,681 - DEBUG: Door Manually Closed
+2023-01-02 10:22:01,053 - DEBUG: Door Manually Closed
+2023-01-02 10:22:02,078 - DEBUG: Door Manually Closed
+2023-01-02 10:22:03,112 - DEBUG: Door Manually Closed
+2023-01-02 10:22:03,781 - DEBUG: Door Manually Closed
+2023-01-02 10:22:04,144 - DEBUG: Door Manually Closed
+2023-01-02 10:22:05,166 - DEBUG: Door Manually Closed
+2023-01-02 10:22:06,202 - DEBUG: Door Manually Closed
+2023-01-02 10:22:06,863 - DEBUG: Door Manually Closed
+2023-01-02 10:22:07,226 - DEBUG: Door Manually Closed
+2023-01-02 10:22:08,263 - DEBUG: Door Manually Closed
+2023-01-02 10:22:09,283 - DEBUG: Door Manually Closed
+2023-01-02 10:22:09,962 - DEBUG: Door Manually Closed
+2023-01-02 10:22:10,332 - DEBUG: Door Manually Closed
+2023-01-02 10:22:11,352 - DEBUG: Door Manually Closed
+2023-01-02 10:22:12,392 - DEBUG: Door Manually Closed
+2023-01-02 10:22:13,054 - DEBUG: Door Manually Closed
+2023-01-02 10:22:13,406 - DEBUG: Door Manually Closed
+2023-01-02 10:22:14,448 - DEBUG: Door Manually Closed
+2023-01-02 10:22:15,456 - DEBUG: Door Manually Closed
+2023-01-02 10:22:16,129 - DEBUG: Door Manually Closed
+2023-01-02 10:22:16,483 - DEBUG: Door Manually Closed
+2023-01-02 10:22:17,514 - DEBUG: Door Manually Closed
+2023-01-02 10:22:18,546 - DEBUG: Door Manually Closed
+2023-01-02 10:22:19,220 - DEBUG: Door Manually Closed
+2023-01-02 10:22:19,580 - DEBUG: Door Manually Closed
+2023-01-02 10:22:20,606 - DEBUG: Door Manually Closed
+2023-01-02 10:22:21,624 - DEBUG: Door Manually Closed
+2023-01-02 10:22:22,303 - DEBUG: Door Manually Closed
+2023-01-02 10:22:22,672 - DEBUG: Door Manually Closed
+2023-01-02 10:22:23,703 - DEBUG: Door Manually Closed
+2023-01-02 10:22:24,773 - DEBUG: Door Manually Closed
+2023-01-02 10:22:25,464 - DEBUG: Door Manually Closed
+2023-01-02 10:22:25,802 - DEBUG: Door Manually Closed
+2023-01-02 10:22:26,810 - DEBUG: Door Manually Closed
+2023-01-02 10:22:27,852 - DEBUG: Door Manually Closed
+2023-01-02 10:22:28,550 - DEBUG: Door Manually Closed
+2023-01-02 10:22:28,882 - DEBUG: Door Manually Closed
+2023-01-02 10:22:29,914 - DEBUG: Door Manually Closed
+2023-01-02 10:22:30,952 - DEBUG: Door Manually Closed
+2023-01-02 10:22:31,639 - DEBUG: Door Manually Closed
+2023-01-02 10:22:31,971 - DEBUG: Door Manually Closed
+2023-01-02 10:22:33,003 - DEBUG: Door Manually Closed
+2023-01-02 10:22:34,023 - DEBUG: Door Manually Closed
+2023-01-02 10:22:34,722 - DEBUG: Door Manually Closed
+2023-01-02 10:22:35,046 - DEBUG: Door Manually Closed
+2023-01-02 10:22:36,066 - DEBUG: Door Manually Closed
+2023-01-02 10:22:37,123 - DEBUG: Door Manually Closed
+2023-01-02 10:22:37,799 - DEBUG: Door Manually Closed
+2023-01-02 10:22:38,139 - DEBUG: Door Manually Closed
+2023-01-02 10:22:39,182 - DEBUG: Door Manually Closed
+2023-01-02 10:22:40,194 - DEBUG: Door Manually Closed
+2023-01-02 10:22:40,898 - DEBUG: Door Manually Closed
+2023-01-02 10:22:41,225 - DEBUG: Door Manually Closed
+2023-01-02 10:22:42,254 - DEBUG: Door Manually Closed
+2023-01-02 10:22:43,282 - DEBUG: Door Manually Closed
+2023-01-02 10:22:43,980 - DEBUG: Door Manually Closed
+2023-01-02 10:22:44,312 - DEBUG: Door Manually Closed
+2023-01-02 10:22:45,332 - DEBUG: Door Manually Closed
+2023-01-02 10:22:46,352 - DEBUG: Door Manually Closed
+2023-01-02 10:22:47,047 - DEBUG: Door Manually Closed
+2023-01-02 10:22:47,372 - DEBUG: Door Manually Closed
+2023-01-02 10:22:48,402 - DEBUG: Door Manually Closed
+2023-01-02 10:22:49,414 - DEBUG: Door Manually Closed
+2023-01-02 10:22:50,156 - DEBUG: Door Manually Closed
+2023-01-02 10:22:50,464 - DEBUG: Door Manually Closed
+2023-01-02 10:22:51,496 - DEBUG: Door Manually Closed
+2023-01-02 10:22:52,542 - DEBUG: Door Manually Closed
+2023-01-02 10:22:53,220 - DEBUG: Door Manually Closed
+2023-01-02 10:22:53,564 - DEBUG: Door Manually Closed
+2023-01-02 10:22:54,586 - DEBUG: Door Manually Closed
+2023-01-02 10:22:55,622 - DEBUG: Door Manually Closed
+2023-01-02 10:22:56,277 - DEBUG: Door Manually Closed
+2023-01-02 10:22:56,648 - DEBUG: Door Manually Closed
+2023-01-02 10:22:57,670 - DEBUG: Door Manually Closed
+2023-01-02 10:22:58,706 - DEBUG: Door Manually Closed
+2023-01-02 10:22:59,349 - DEBUG: Door Manually Closed
+2023-01-02 10:22:59,748 - DEBUG: Door Manually Closed
+2023-01-02 10:23:00,772 - DEBUG: Door Manually Closed
+2023-01-02 10:23:01,798 - DEBUG: Door Manually Closed
+2023-01-02 10:23:02,430 - DEBUG: Door Manually Closed
+2023-01-02 10:23:02,834 - DEBUG: Door Manually Closed
+2023-01-02 10:23:03,858 - DEBUG: Door Manually Closed
+2023-01-02 10:23:04,900 - DEBUG: Door Manually Closed
+2023-01-02 10:23:05,506 - DEBUG: Door Manually Closed
+2023-01-02 10:23:05,932 - DEBUG: Door Manually Closed
+2023-01-02 10:23:06,940 - DEBUG: Door Manually Closed
+2023-01-02 10:23:07,962 - DEBUG: Door Manually Closed
+2023-01-02 10:23:08,590 - DEBUG: Door Manually Closed
+2023-01-02 10:23:08,984 - DEBUG: Door Manually Closed
+2023-01-02 10:23:10,022 - DEBUG: Door Manually Closed
+2023-01-02 10:23:11,051 - DEBUG: Door Manually Closed
+2023-01-02 10:23:11,670 - DEBUG: Door Manually Closed
+2023-01-02 10:23:12,096 - DEBUG: Door Manually Closed
+2023-01-02 10:23:13,124 - DEBUG: Door Manually Closed
+2023-01-02 10:23:14,145 - DEBUG: Door Manually Closed
+2023-01-02 10:23:14,744 - DEBUG: Door Manually Closed
+2023-01-02 10:23:15,182 - DEBUG: Door Manually Closed
+2023-01-02 10:23:16,213 - DEBUG: Door Manually Closed
+2023-01-02 10:23:17,221 - DEBUG: Door Manually Closed
+2023-01-02 10:23:17,865 - DEBUG: Door Manually Closed
+2023-01-02 10:23:18,246 - DEBUG: Door Manually Closed
+2023-01-02 10:23:19,299 - DEBUG: Door Manually Closed
+2023-01-02 10:23:20,316 - DEBUG: Door Manually Closed
+2023-01-02 10:23:20,929 - DEBUG: Door Manually Closed
+2023-01-02 10:23:21,346 - DEBUG: Door Manually Closed
+2023-01-02 10:23:22,392 - DEBUG: Door Manually Closed
+2023-01-02 10:23:23,404 - DEBUG: Door Manually Closed
+2023-01-02 10:23:24,036 - DEBUG: Door Manually Closed
+2023-01-02 10:23:24,454 - DEBUG: Door Manually Closed
+2023-01-02 10:23:25,484 - DEBUG: Door Manually Closed
+2023-01-02 10:23:26,504 - DEBUG: Door Manually Closed
+2023-01-02 10:23:27,117 - DEBUG: Door Manually Closed
+2023-01-02 10:23:27,556 - DEBUG: Door Manually Closed
+2023-01-02 10:23:28,596 - DEBUG: Door Manually Closed
+2023-01-02 10:23:29,607 - DEBUG: Door Manually Closed
+2023-01-02 10:23:30,220 - DEBUG: Door Manually Closed
+2023-01-02 10:23:30,636 - DEBUG: Door Manually Closed
+2023-01-02 10:23:31,666 - DEBUG: Door Manually Closed
+2023-01-02 10:23:32,704 - DEBUG: Door Manually Closed
+2023-01-02 10:23:33,299 - DEBUG: Door Manually Closed
+2023-01-02 10:23:33,746 - DEBUG: Door Manually Closed
+2023-01-02 10:23:34,766 - DEBUG: Door Manually Closed
+2023-01-02 10:23:35,807 - DEBUG: Door Manually Closed
+2023-01-02 10:23:36,410 - DEBUG: Door Manually Closed
+2023-01-02 10:23:36,843 - DEBUG: Door Manually Closed
+2023-01-02 10:23:37,862 - DEBUG: Door Manually Closed
+2023-01-02 10:23:38,877 - DEBUG: Door Manually Closed
+2023-01-02 10:23:39,496 - DEBUG: Door Manually Closed
+2023-01-02 10:23:39,923 - DEBUG: Door Manually Closed
+2023-01-02 10:23:40,942 - DEBUG: Door Manually Closed
+2023-01-02 10:23:41,956 - DEBUG: Door Manually Closed
+2023-01-02 10:23:42,566 - DEBUG: Door Manually Closed
+2023-01-02 10:23:43,002 - DEBUG: Door Manually Closed
+2023-01-02 10:23:44,038 - DEBUG: Door Manually Closed
+2023-01-02 10:23:45,062 - DEBUG: Door Manually Closed
+2023-01-02 10:23:45,663 - DEBUG: Door Manually Closed
+2023-01-02 10:23:46,081 - DEBUG: Door Manually Closed
+2023-01-02 10:23:47,122 - DEBUG: Door Manually Closed
+2023-01-02 10:23:48,159 - DEBUG: Door Manually Closed
+2023-01-02 10:23:48,771 - DEBUG: Door Manually Closed
+2023-01-02 10:23:49,217 - DEBUG: Door Manually Closed
+2023-01-02 10:23:50,252 - DEBUG: Door Manually Closed
+2023-01-02 10:23:51,264 - DEBUG: Door Manually Closed
+2023-01-02 10:23:51,891 - DEBUG: Door Manually Closed
+2023-01-02 10:23:52,315 - DEBUG: Door Manually Closed
+2023-01-02 10:23:53,352 - DEBUG: Door Manually Closed
+2023-01-02 10:23:54,383 - DEBUG: Door Manually Closed
+2023-01-02 10:23:54,979 - DEBUG: Door Manually Closed
+2023-01-02 10:23:55,412 - DEBUG: Door Manually Closed
+2023-01-02 10:23:56,436 - DEBUG: Door Manually Closed
+2023-01-02 10:23:57,456 - DEBUG: Door Manually Closed
+2023-01-02 10:23:58,061 - DEBUG: Door Manually Closed
+2023-01-02 10:23:58,512 - DEBUG: Door Manually Closed
+2023-01-02 10:23:59,549 - DEBUG: Door Manually Closed
+2023-01-02 10:24:00,597 - DEBUG: Door Manually Closed
+2023-01-02 10:24:01,140 - DEBUG: Door Manually Closed
+2023-01-02 10:24:01,634 - DEBUG: Door Manually Closed
+2023-01-02 10:24:02,666 - DEBUG: Door Manually Closed
+2023-01-02 10:24:03,698 - DEBUG: Door Manually Closed
+2023-01-02 10:24:04,240 - DEBUG: Door Manually Closed
+2023-01-02 10:24:04,732 - DEBUG: Door Manually Closed
+2023-01-02 10:24:05,758 - DEBUG: Door Manually Closed
+2023-01-02 10:24:06,769 - DEBUG: Door Manually Closed
+2023-01-02 10:24:07,350 - DEBUG: Door Manually Closed
+2023-01-02 10:24:07,792 - DEBUG: Door Manually Closed
+2023-01-02 10:24:08,811 - DEBUG: Door Manually Closed
+2023-01-02 10:24:09,860 - DEBUG: Door Manually Closed
+2023-01-02 10:24:10,432 - DEBUG: Door Manually Closed
+2023-01-02 10:24:10,878 - DEBUG: Door Manually Closed
+2023-01-02 10:24:11,922 - DEBUG: Door Manually Closed
+2023-01-02 10:24:12,935 - DEBUG: Door Manually Closed
+2023-01-02 10:24:13,510 - DEBUG: Door Manually Closed
+2023-01-02 10:24:13,952 - DEBUG: Door Manually Closed
+2023-01-02 10:24:14,965 - DEBUG: Door Manually Closed
+2023-01-02 10:24:16,004 - DEBUG: Door Manually Closed
+2023-01-02 10:24:16,557 - DEBUG: Door Manually Closed
+2023-01-02 10:24:17,023 - DEBUG: Door Manually Closed
+2023-01-02 10:24:18,057 - DEBUG: Door Manually Closed
+2023-01-02 10:24:19,093 - DEBUG: Door Manually Closed
+2023-01-02 10:24:19,639 - DEBUG: Door Manually Closed
+2023-01-02 10:24:20,132 - DEBUG: Door Manually Closed
+2023-01-02 10:24:21,158 - DEBUG: Door Manually Closed
+2023-01-02 10:24:22,229 - DEBUG: Door Manually Closed
+2023-01-02 10:24:22,722 - DEBUG: Door Manually Closed
+2023-01-02 10:24:23,272 - DEBUG: Door Manually Closed
+2023-01-02 10:24:24,323 - DEBUG: Door Manually Closed
+2023-01-02 10:24:25,336 - DEBUG: Door Manually Closed
+2023-01-02 10:24:25,793 - DEBUG: Door Manually Closed
+2023-01-02 10:24:26,352 - DEBUG: Door Manually Closed
+2023-01-02 10:24:27,366 - DEBUG: Door Manually Closed
+2023-01-02 10:24:28,397 - DEBUG: Door Manually Closed
+2023-01-02 10:24:28,862 - DEBUG: Door Manually Closed
+2023-01-02 10:24:29,444 - DEBUG: Door Manually Closed
+2023-01-02 10:24:30,462 - DEBUG: Door Manually Closed
+2023-01-02 10:24:31,473 - DEBUG: Door Manually Closed
+2023-01-02 10:24:31,919 - DEBUG: Door Manually Closed
+2023-01-02 10:24:32,494 - DEBUG: Door Manually Closed
+2023-01-02 10:24:33,534 - DEBUG: Door Manually Closed
+2023-01-02 10:24:34,594 - DEBUG: Door Manually Closed
+2023-01-02 10:24:35,004 - DEBUG: Door Manually Closed
+2023-01-02 10:24:35,606 - DEBUG: Door Manually Closed
+2023-01-02 10:24:36,644 - DEBUG: Door Manually Closed
+2023-01-02 10:24:37,685 - DEBUG: Door Manually Closed
+2023-01-02 10:24:38,083 - DEBUG: Door Manually Closed
+2023-01-02 10:24:38,703 - DEBUG: Door Manually Closed
+2023-01-02 10:24:39,723 - DEBUG: Door Manually Closed
+2023-01-02 10:24:40,736 - DEBUG: Door Manually Closed
+2023-01-02 10:24:41,158 - DEBUG: Door Manually Closed
+2023-01-02 10:24:41,756 - DEBUG: Door Manually Closed
+2023-01-02 10:24:42,794 - DEBUG: Door Manually Closed
+2023-01-02 10:24:43,818 - DEBUG: Door Manually Closed
+2023-01-02 10:24:44,217 - DEBUG: Door Manually Closed
+2023-01-02 10:24:44,829 - DEBUG: Door Manually Closed
+2023-01-02 10:24:45,863 - DEBUG: Door Manually Closed
+2023-01-02 10:24:46,871 - DEBUG: Door Manually Closed
+2023-01-02 10:24:47,300 - DEBUG: Door Manually Closed
+2023-01-02 10:24:47,896 - DEBUG: Door Manually Closed
+2023-01-02 10:24:48,918 - DEBUG: Door Manually Closed
+2023-01-02 10:24:49,975 - DEBUG: Door Manually Closed
+2023-01-02 10:24:50,366 - DEBUG: Door Manually Closed
+2023-01-02 10:24:51,012 - DEBUG: Door Manually Closed
+2023-01-02 10:24:52,044 - DEBUG: Door Manually Closed
+2023-01-02 10:24:53,066 - DEBUG: Door Manually Closed
+2023-01-02 10:24:53,428 - DEBUG: Door Manually Closed
+2023-01-02 10:24:54,102 - DEBUG: Door Manually Closed
+2023-01-02 10:24:55,118 - DEBUG: Door Manually Closed
+2023-01-02 10:24:56,131 - DEBUG: Door Manually Closed
+2023-01-02 10:24:56,513 - DEBUG: Door Manually Closed
+2023-01-02 10:24:57,162 - DEBUG: Door Manually Closed
+2023-01-02 10:24:58,196 - DEBUG: Door Manually Closed
+2023-01-02 10:24:59,218 - DEBUG: Door Manually Closed
+2023-01-02 10:24:59,599 - DEBUG: Door Manually Closed
+2023-01-02 10:25:00,266 - DEBUG: Door Manually Closed
+2023-01-02 10:25:01,284 - DEBUG: Door Manually Closed
+2023-01-02 10:25:02,312 - DEBUG: Door Manually Closed
+2023-01-02 10:25:02,655 - DEBUG: Door Manually Closed
+2023-01-02 10:25:03,326 - DEBUG: Door Manually Closed
+2023-01-02 10:25:04,372 - DEBUG: Door Manually Closed
+2023-01-02 10:25:05,383 - DEBUG: Door Manually Closed
+2023-01-02 10:25:05,711 - DEBUG: Door Manually Closed
+2023-01-02 10:25:06,433 - DEBUG: Door Manually Closed
+2023-01-02 10:25:07,453 - DEBUG: Door Manually Closed
+2023-01-02 10:25:08,468 - DEBUG: Door Manually Closed
+2023-01-02 10:25:08,795 - DEBUG: Door Manually Closed
+2023-01-02 10:25:09,493 - DEBUG: Door Manually Closed
+2023-01-02 10:25:10,506 - DEBUG: Door Manually Closed
+2023-01-02 10:25:11,527 - DEBUG: Door Manually Closed
+2023-01-02 10:25:11,857 - DEBUG: Door Manually Closed
+2023-01-02 10:25:12,563 - DEBUG: Door Manually Closed
+2023-01-02 10:25:13,596 - DEBUG: Door Manually Closed
+2023-01-02 10:25:14,622 - DEBUG: Door Manually Closed
+2023-01-02 10:25:14,921 - DEBUG: Door Manually Closed
+2023-01-02 10:25:15,648 - DEBUG: Door Manually Closed
+2023-01-02 10:25:16,676 - DEBUG: Door Manually Closed
+2023-01-02 10:25:17,703 - DEBUG: Door Manually Closed
+2023-01-02 10:25:17,978 - DEBUG: Door Manually Closed
+2023-01-02 10:25:18,716 - DEBUG: Door Manually Closed
+2023-01-02 10:25:19,736 - DEBUG: Door Manually Closed
+2023-01-02 10:25:20,782 - DEBUG: Door Manually Closed
+2023-01-02 10:25:21,069 - DEBUG: Door Manually Closed
+2023-01-02 10:25:21,804 - DEBUG: Door Manually Closed
+2023-01-02 10:25:22,843 - DEBUG: Door Manually Closed
+2023-01-02 10:25:23,851 - DEBUG: Door Manually Closed
+2023-01-02 10:25:24,138 - DEBUG: Door Manually Closed
+2023-01-02 10:25:24,863 - DEBUG: Door Manually Closed
+2023-01-02 10:25:25,877 - DEBUG: Door Manually Closed
+2023-01-02 10:25:26,907 - DEBUG: Door Manually Closed
+2023-01-02 10:25:27,201 - DEBUG: Door Manually Closed
+2023-01-02 10:25:27,921 - DEBUG: Door Manually Closed
+2023-01-02 10:25:28,947 - DEBUG: Door Manually Closed
+2023-01-02 10:25:29,958 - DEBUG: Door Manually Closed
+2023-01-02 10:25:30,264 - DEBUG: Door Manually Closed
+2023-01-02 10:25:30,982 - DEBUG: Door Manually Closed
+2023-01-02 10:25:32,012 - DEBUG: Door Manually Closed
+2023-01-02 10:25:33,036 - DEBUG: Door Manually Closed
+2023-01-02 10:25:33,322 - DEBUG: Door Manually Closed
+2023-01-02 10:25:34,063 - DEBUG: Door Manually Closed
+2023-01-02 10:25:35,082 - DEBUG: Door Manually Closed
+2023-01-02 10:25:36,091 - DEBUG: Door Manually Closed
+2023-01-02 10:25:36,386 - DEBUG: Door Manually Closed
+2023-01-02 10:25:37,122 - DEBUG: Door Manually Closed
+2023-01-02 10:25:38,137 - DEBUG: Door Manually Closed
+2023-01-02 10:25:39,158 - DEBUG: Door Manually Closed
+2023-01-02 10:25:39,447 - DEBUG: Door Manually Closed
+2023-01-02 10:25:40,190 - DEBUG: Door Manually Closed
+2023-01-02 10:25:41,216 - DEBUG: Door Manually Closed
+2023-01-02 10:25:42,230 - DEBUG: Door Manually Closed
+2023-01-02 10:25:42,517 - DEBUG: Door Manually Closed
+2023-01-02 10:25:43,251 - DEBUG: Door Manually Closed
+2023-01-02 10:25:44,287 - DEBUG: Door Manually Closed
+2023-01-02 10:25:45,322 - DEBUG: Door Manually Closed
+2023-01-02 10:25:45,677 - DEBUG: Door Manually Closed
+2023-01-02 10:25:46,382 - DEBUG: Door Manually Closed
+2023-01-02 10:25:47,462 - DEBUG: Door Manually Closed
+2023-01-02 10:25:48,544 - DEBUG: Door Manually Closed
+2023-01-02 10:25:48,963 - DEBUG: Door Manually Closed
+2023-01-02 10:25:49,601 - DEBUG: Door Manually Closed
+2023-01-02 10:25:50,616 - DEBUG: Door Manually Closed
+2023-01-02 10:25:52,104 - DEBUG: Door Manually Closed
+2023-01-02 10:25:55,183 - DEBUG: Door Manually Closed
+2023-01-02 10:25:58,260 - DEBUG: Door Manually Closed
+2023-01-02 10:26:01,337 - DEBUG: Door Manually Closed
+2023-01-02 10:26:04,402 - DEBUG: Door Manually Closed
+2023-01-02 10:26:07,460 - DEBUG: Door Manually Closed
+2023-01-02 10:26:10,533 - DEBUG: Door Manually Closed
+2023-01-02 10:26:13,582 - DEBUG: Door Manually Closed
+2023-01-02 10:26:16,712 - DEBUG: Door Manually Closed
+2023-01-02 10:26:19,795 - DEBUG: Door Manually Closed
+2023-01-02 10:26:22,870 - DEBUG: Door Manually Closed
+2023-01-02 10:26:25,993 - DEBUG: Door Manually Closed
+2023-01-02 10:26:29,096 - DEBUG: Door Manually Closed
+2023-01-02 10:26:32,191 - DEBUG: Door Manually Closed
+2023-01-02 10:26:36,197 - DEBUG: Door Manually Closed
+2023-01-02 10:27:25,907 - INFO: Coop started
+2023-01-02 10:27:25,931 - INFO: The UTC time is: 2023-01-02 10:27:25.784139+00:00
+2023-01-02 10:27:27,436 - DEBUG: Doorstatus could not be determined but door should have been and is now open.
+2023-01-02 10:27:27,452 - DEBUG: Door Manually Closed
+2023-01-02 10:27:28,468 - DEBUG: Door Manually Closed
+2023-01-02 10:27:29,494 - DEBUG: Door Manually Closed
+2023-01-02 10:27:30,560 - DEBUG: Door Manually Closed
+2023-01-02 10:27:31,572 - DEBUG: Door Manually Closed
+2023-01-02 10:27:32,593 - DEBUG: Door Manually Closed
+2023-01-02 10:27:33,620 - DEBUG: Door Manually Closed
+2023-01-02 10:27:34,640 - DEBUG: Door Manually Closed
+2023-01-02 10:27:35,660 - DEBUG: Door Manually Opened
+2023-01-02 11:29:15,695 - DEBUG: Door Manually Closed
+2023-01-02 11:29:16,701 - DEBUG: Door Manually Closed
+2023-01-02 11:29:17,703 - DEBUG: Door Manually Closed
+2023-01-02 11:29:18,704 - DEBUG: Door Manually Closed
+2023-01-02 11:29:19,706 - DEBUG: Door Manually Closed
+2023-01-02 11:29:20,707 - DEBUG: Door Manually Closed
+2023-01-02 11:29:21,719 - DEBUG: Door Manually Closed
+2023-01-02 11:29:22,725 - DEBUG: Door Manually Closed
+2023-01-02 11:29:23,727 - DEBUG: Door Manually Closed
+2023-01-02 11:29:24,728 - DEBUG: Door Manually Closed
+2023-01-02 11:29:25,730 - DEBUG: Door Manually Closed
+2023-01-02 11:29:28,745 - DEBUG: Door Manually Opened
+2023-01-02 11:29:30,247 - DEBUG: Door Manually Opened
+2023-01-02 11:29:31,749 - DEBUG: Door Manually Opened
+2023-01-02 11:29:33,258 - DEBUG: Door Manually Opened
+2023-01-02 11:29:34,759 - DEBUG: Door Manually Opened
+2023-01-02 11:29:36,261 - DEBUG: Door Manually Opened
+2023-01-02 11:29:37,763 - DEBUG: Door Manually Opened
+2023-01-02 11:29:39,264 - DEBUG: Door Manually Opened
+2023-01-02 11:29:40,766 - DEBUG: Door Manually Opened
+2023-01-02 11:29:42,268 - DEBUG: Door Manually Opened
+2023-01-02 11:29:43,769 - DEBUG: Door Manually Opened
+2023-01-02 11:29:45,271 - DEBUG: Door Manually Opened
+2023-01-02 11:29:46,772 - DEBUG: Door Manually Opened
+2023-01-02 11:29:48,274 - DEBUG: Door Manually Opened
+2023-01-02 11:29:49,776 - DEBUG: Door Manually Opened
+2023-01-02 11:29:51,278 - DEBUG: Door Manually Opened
+2023-01-02 11:29:52,779 - DEBUG: Door Manually Opened
+2023-01-02 11:29:54,281 - DEBUG: Door Manually Opened
+2023-01-02 11:29:55,783 - DEBUG: Door Manually Opened
+2023-01-02 11:29:57,284 - DEBUG: Door Manually Opened
+2023-01-02 11:29:58,786 - DEBUG: Door Manually Opened
+2023-01-02 11:30:00,288 - DEBUG: Door Manually Opened
+2023-01-02 11:30:01,790 - DEBUG: Door Manually Opened
+2023-01-02 11:30:03,291 - DEBUG: Door Manually Opened
+2023-01-02 11:30:04,793 - DEBUG: Door Manually Opened
+2023-01-02 11:30:06,295 - DEBUG: Door Manually Opened
+2023-01-02 11:30:07,796 - DEBUG: Door Manually Opened
+2023-01-02 11:30:09,298 - DEBUG: Door Manually Opened
+2023-01-02 11:30:10,800 - DEBUG: Door Manually Opened
+2023-01-02 11:30:12,301 - DEBUG: Door Manually Opened
+2023-01-02 11:30:13,809 - DEBUG: Door Manually Opened
+2023-01-02 11:30:15,311 - DEBUG: Door Manually Opened
+2023-01-02 11:30:16,812 - DEBUG: Door Manually Opened
+2023-01-02 11:30:18,314 - DEBUG: Door Manually Opened
+2023-01-02 11:30:19,816 - DEBUG: Door Manually Opened
+                                                                                                                                                                  2023-01-02 11:28:02,170 - INFO: Coop started
+2023-01-02 11:28:02,208 - INFO: The UTC time is: 2023-01-02 11:28:02.069707+00:00
+2023-01-02 11:28:03,711 - DEBUG: Door was closed at startup while it should have been open
+2023-01-02 11:59:54,258 - DEBUG: Door Manually Opened
+2023-01-02 11:59:58,769 - DEBUG: Door Manually Closed
+2023-01-02 11:59:59,771 - DEBUG: Door Manually Opened
+2023-01-02 12:00:01,273 - DEBUG: Door Manually Opened
+2023-01-02 12:00:03,793 - DEBUG: Door Manually Opened
+2023-01-02 12:00:08,297 - DEBUG: Door Manually Opened
+2023-01-02 12:03:16,931 - INFO: Coop started
+2023-01-02 12:03:16,935 - INFO: The UTC time is: 2023-01-02 12:03:16.916117+00:00
+2023-01-02 12:03:18,997 - DEBUG: Door was closed at startup while it should have been open
+2023-01-02 12:08:51,658 - INFO: Coop started
+2023-01-02 12:08:51,673 - INFO: The UTC time is: 2023-01-02 12:08:51.641571+00:00
+2023-01-02 12:08:53,720 - DEBUG: Door was closed at startup while it should have been open
+2023-01-02 12:09:20,190 - INFO: Coop started
+2023-01-02 12:09:20,207 - INFO: The UTC time is: 2023-01-02 12:09:20.177063+00:00
+2023-01-02 12:09:23,273 - DEBUG: Door was closed at startup while it should have been open
+2023-01-02 12:10:31,418 - DEBUG: Door Manually Opened
+2023-01-02 12:10:36,529 - DEBUG: Door Manually Opened
+2023-01-02 12:10:41,634 - DEBUG: Door Manually Opened
+2023-01-02 12:10:43,844 - INFO: Door is open
+2023-01-02 12:10:52,709 - DEBUG: Door Manually Closed
+2023-01-02 12:10:55,117 - INFO: Door is closed
+2023-01-02 12:10:58,805 - DEBUG: Door Manually Opened
+2023-01-02 12:11:01,594 - INFO: Door is open
+2023-01-02 12:11:04,884 - DEBUG: Door Manually Closed
+2023-01-02 12:11:07,307 - INFO: Door is closed
+2023-01-02 12:11:10,992 - DEBUG: Door Manually Opened
+2023-01-02 12:11:13,795 - INFO: Door is open
+2023-01-02 12:11:17,081 - DEBUG: Door Manually Closed
+2023-01-02 12:11:19,471 - INFO: Door is closed
+2023-01-02 12:11:20,189 - DEBUG: Door Manually Closed
+2023-01-02 12:11:20,216 - INFO: Door is closed
+2023-01-02 12:11:26,231 - DEBUG: Door Manually Opened
+2023-01-02 12:11:29,000 - INFO: Door is open
+2023-01-02 12:11:30,314 - DEBUG: Door Manually Closed
+2023-01-02 12:11:32,685 - INFO: Door is closed
+2023-01-02 12:11:33,392 - DEBUG: Door Manually Closed
+2023-01-02 12:11:33,412 - INFO: Door is closed
+2023-01-02 12:11:34,422 - DEBUG: Door Manually Closed
+2023-01-02 12:11:34,450 - INFO: Door is closed
+2023-01-02 12:11:35,456 - DEBUG: Door Manually Closed
+2023-01-02 12:11:35,477 - INFO: Door is closed
+2023-01-02 12:11:36,488 - DEBUG: Door Manually Closed
+2023-01-02 12:11:36,517 - INFO: Door is closed
+2023-01-02 12:11:37,529 - DEBUG: Door Manually Closed
+2023-01-02 12:11:37,573 - INFO: Door is closed
+2023-01-02 12:11:38,579 - DEBUG: Door Manually Closed
+2023-01-02 12:11:38,619 - INFO: Door is closed
+2023-01-02 12:11:39,621 - DEBUG: Door Manually Opened
+2023-01-02 12:11:42,358 - INFO: Door is open
+2023-01-02 12:11:44,704 - DEBUG: Door Manually Closed
+2023-01-02 12:11:47,109 - INFO: Door is closed
+2023-01-02 12:13:13,767 - INFO: Coop started
+2023-01-02 12:13:13,785 - INFO: The UTC time is: 2023-01-02 12:13:13.752566+00:00
+2023-01-02 12:13:16,540 - INFO: Door is open
+2023-01-02 12:13:16,881 - DEBUG: Door was closed at startup while it should have been open
+2023-01-02 12:13:40,918 - DEBUG: Door Manually Closed
+2023-01-02 12:13:43,648 - INFO: Door is closed
+2023-01-02 12:13:49,007 - DEBUG: Door Manually Opened
+2023-01-02 12:13:52,000 - INFO: Door is open
+2023-01-02 12:13:54,093 - DEBUG: Door Manually Closed
+2023-01-02 12:13:56,781 - INFO: Door is closed
+2023-01-02 12:14:00,186 - DEBUG: Door Manually Opened
+2023-01-02 12:14:04,267 - DEBUG: Door Manually Closed
+2023-01-02 12:14:06,779 - INFO: Door is closed
+2023-01-02 12:14:10,362 - DEBUG: Door Manually Opened
+2023-01-02 12:14:15,458 - DEBUG: Door Manually Closed
+2023-01-02 12:14:18,005 - INFO: Door is closed
+2023-01-02 12:14:19,533 - DEBUG: Door Manually Opened
+2023-01-02 12:14:22,521 - INFO: Door is open
+2023-01-02 12:14:33,633 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:14:54,114 - INFO: Coop started
+2023-01-02 12:14:54,127 - INFO: The UTC time is: 2023-01-02 12:14:54.099117+00:00
+2023-01-02 12:14:54,148 - INFO: Door was already open.
+2023-01-02 12:15:17,189 - DEBUG: Door Manually Closed
+2023-01-02 12:15:19,679 - INFO: Door is closed
+2023-01-02 12:15:45,312 - DEBUG: Door Manually Opened
+2023-01-02 12:15:48,224 - INFO: Door is open
+2023-01-02 12:15:58,431 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:16:15,462 - DEBUG: Door Manually Closed
+2023-01-02 12:16:17,973 - INFO: Door is closed
+2023-01-02 12:17:02,393 - INFO: Coop started
+2023-01-02 12:17:02,410 - INFO: The UTC time is: 2023-01-02 12:17:02.380266+00:00
+2023-01-02 12:17:05,398 - INFO: Door is open
+2023-01-02 12:17:05,488 - DEBUG: Door was closed at startup while it should have been open
+2023-01-02 12:17:17,509 - DEBUG: Door Manually Closed
+2023-01-02 12:17:20,043 - INFO: Door is closed
+2023-01-02 12:17:55,611 - DEBUG: Door Manually Opened
+2023-01-02 12:18:11,719 - DEBUG: Door Manually Closed
+2023-01-02 12:18:14,206 - INFO: Door is closed
+2023-01-02 12:18:22,833 - DEBUG: Door Manually Opened
+2023-01-02 12:18:26,926 - DEBUG: Door Manually Closed
+2023-01-02 12:18:29,403 - INFO: Door is closed
+2023-01-02 12:18:31,033 - DEBUG: Door Manually Opened
+2023-01-02 12:18:34,046 - INFO: Door is open
+2023-01-02 12:19:18,174 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:20:18,270 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:22:34,921 - INFO: Coop started
+2023-01-02 12:22:34,925 - INFO: The UTC time is: 2023-01-02 12:22:34.905956+00:00
+2023-01-02 12:22:34,931 - INFO: Door was already open.
+2023-01-02 12:22:49,978 - DEBUG: Door Manually Closed
+2023-01-02 12:22:52,695 - INFO: Door is closed
+2023-01-02 12:22:55,083 - DEBUG: Door Manually Opened
+2023-01-02 12:23:35,227 - INFO: Coop started
+2023-01-02 12:23:35,271 - INFO: The UTC time is: 2023-01-02 12:23:35.191547+00:00
+2023-01-02 12:23:35,306 - INFO: Door was already open.
+2023-01-02 12:24:35,377 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:25:35,446 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:26:35,535 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:27:35,625 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:28:35,713 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:29:35,799 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:30:35,894 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:31:35,984 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:32:36,069 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:33:36,159 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:34:36,247 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:35:36,337 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:36:36,424 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:37:36,506 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:38:36,593 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:39:36,670 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:40:36,758 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:41:36,842 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:42:36,924 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:43:37,012 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:44:37,099 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:45:37,191 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:46:37,277 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:47:37,364 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:48:37,451 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:49:37,538 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:50:37,625 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:51:37,708 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:52:37,802 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:53:37,907 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:54:37,997 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:55:38,079 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:56:38,162 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:57:38,247 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:58:38,334 - DEBUG: DoorOpenCheck: OK
+2023-01-02 12:59:38,422 - DEBUG: DoorOpenCheck: OK
+2023-01-02 13:00:38,510 - DEBUG: DoorOpenCheck: OK
+2023-01-02 13:00:44,522 - DEBUG: Door Manually Closed
+2023-01-02 13:00:47,137 - INFO: Door is closed
+2023-01-02 13:04:50,917 - DEBUG: Door Manually Opened
+2023-01-02 16:17:42,217 - INFO: Coop started
+2023-01-02 16:17:42,243 - INFO: The UTC time is: 2023-01-02 16:17:42.129317+00:00
+2023-01-02 16:17:42,389 - INFO: Door is open
+2023-01-02 16:17:43,332 - DEBUG: Doorstatus could not be determined but door should have been and is now open.
+2023-01-02 16:17:51,876 - INFO: Coop started
+2023-01-02 16:17:51,911 - INFO: The UTC time is: 2023-01-02 16:17:51.764301+00:00
+2023-01-02 16:17:51,916 - INFO: Door was already open.
+2023-01-02 16:18:52,025 - DEBUG: DoorOpenCheck: OK
+2023-01-02 16:32:11,946 - WARNING: Closing door
+2023-01-02 16:32:14,569 - INFO: Door is closed
+2023-01-02 16:33:15,040 - DEBUG: Door will open at 2023-01-03 08:28:00+00:00 UTC
+2023-01-02 16:33:15,044 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-03 16:33:00+00:00 UTC
+2023-01-02 16:34:15,137 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:35:15,222 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:36:15,313 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:37:15,395 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:37:31,416 - DEBUG: Door Manually Opened
+2023-01-02 16:37:38,459 - DEBUG: Door Manually Closed
+2023-01-02 16:37:41,023 - INFO: Door is closed
+2023-01-02 16:38:19,554 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:39:19,638 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:40:19,705 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:41:19,797 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:42:19,887 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:43:19,963 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:44:20,051 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:45:20,144 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:46:20,235 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:47:20,326 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:48:20,407 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:49:20,497 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:50:20,588 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:51:20,690 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:52:20,779 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:53:20,869 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:54:20,958 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:55:21,046 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:56:21,135 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:57:21,227 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:58:21,317 - DEBUG: DoorClosedCheck: OK
+2023-01-02 16:59:21,407 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:00:21,496 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:01:21,586 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:02:21,674 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:03:21,762 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:04:21,833 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:05:21,939 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:06:22,032 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:07:22,131 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:08:22,228 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:09:22,324 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:10:22,378 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:11:22,479 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:12:22,577 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:13:22,673 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:14:22,768 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:15:22,864 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:16:22,957 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:17:23,053 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:18:23,148 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:19:23,240 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:20:23,345 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:21:23,441 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:22:23,538 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:23:23,617 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:24:23,715 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:25:23,807 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:26:23,905 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:27:23,985 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:28:24,080 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:29:24,169 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:30:24,269 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:31:24,360 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:32:24,466 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:33:24,560 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:34:24,658 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:35:24,753 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:36:24,850 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:37:24,943 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:38:25,044 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:39:25,140 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:40:25,236 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:41:25,331 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:42:25,428 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:43:25,523 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:44:25,620 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:45:25,720 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:46:25,822 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:47:25,918 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:48:26,009 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:49:26,104 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:50:26,194 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:51:26,290 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:52:26,386 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:53:26,480 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:54:26,576 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:55:26,673 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:56:26,768 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:57:26,866 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:58:26,962 - DEBUG: DoorClosedCheck: OK
+2023-01-02 17:59:27,059 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:00:27,143 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:01:27,236 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:02:27,332 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:03:27,435 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:04:27,532 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:05:27,634 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:06:27,731 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:07:27,827 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:08:27,924 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:09:28,020 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:10:28,117 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:11:28,210 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:12:28,306 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:13:28,377 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:14:28,474 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:15:28,570 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:16:28,668 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:17:28,770 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:18:28,893 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:19:28,980 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:20:29,084 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:21:29,168 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:22:29,267 - DEBUG: DoorClosedCheck: OK
+2023-01-02 18:23:44,028 - INFO: Coop started
+2023-01-02 18:23:44,045 - INFO: The UTC time is: 2023-01-02 18:23:43.984588+00:00
+2023-01-02 18:23:44,064 - INFO: Door was already closed
