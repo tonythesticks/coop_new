@@ -1238,3 +1238,382 @@
 2023-01-02 18:23:44,028 - INFO: Coop started
 2023-01-02 18:23:44,045 - INFO: The UTC time is: 2023-01-02 18:23:43.984588+00:00
 2023-01-02 18:23:44,064 - INFO: Door was already closed
+2023-01-03 07:58:55,468 - WARNING: Opening door
+2023-01-03 07:59:58,596 - DEBUG: Door will open again at 2023-01-04 08:27:00+00:00 UTC
+2023-01-03 07:59:58,604 - DEBUG: Door will close 30 minutes after sunset at 2023-01-03 16:33:00+00:00 UTC
+2023-01-03 16:33:42,021 - WARNING: Closing door
+2023-01-03 16:33:44,515 - INFO: Door is closed
+2023-01-03 16:34:45,109 - DEBUG: Door will open at 2023-01-04 08:27:00+00:00 UTC
+2023-01-03 16:34:45,115 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-04 16:34:00+00:00 UTC
+2023-01-04 07:57:05,988 - WARNING: Opening door
+2023-01-04 07:58:09,109 - DEBUG: Door will open again at 2023-01-05 08:27:00+00:00 UTC
+2023-01-04 07:58:09,115 - DEBUG: Door will close 30 minutes after sunset at 2023-01-04 16:34:00+00:00 UTC
+2023-01-04 16:34:53,186 - WARNING: Closing door
+2023-01-04 16:34:55,659 - INFO: Door is closed
+2023-01-04 16:35:56,284 - DEBUG: Door will open at 2023-01-05 08:27:00+00:00 UTC
+2023-01-04 16:35:56,290 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-05 16:35:00+00:00 UTC
+2023-01-05 07:57:17,103 - WARNING: Opening door
+2023-01-05 07:58:20,212 - DEBUG: Door will open again at 2023-01-06 08:27:00+00:00 UTC
+2023-01-05 07:58:20,218 - DEBUG: Door will close 30 minutes after sunset at 2023-01-05 16:35:00+00:00 UTC
+2023-01-05 16:35:04,400 - WARNING: Closing door
+2023-01-05 16:35:04,608 - INFO: Door is closed
+2023-01-05 16:36:05,463 - DEBUG: Door will open at 2023-01-06 08:27:00+00:00 UTC
+2023-01-05 16:36:05,469 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-06 16:37:00+00:00 UTC
+2023-01-06 07:57:25,526 - WARNING: Opening door
+2023-01-06 07:58:28,636 - DEBUG: Door will open again at 2023-01-07 08:26:00+00:00 UTC
+2023-01-06 07:58:28,642 - DEBUG: Door will close 30 minutes after sunset at 2023-01-06 16:37:00+00:00 UTC
+2023-01-06 16:37:12,359 - WARNING: Closing door
+2023-01-06 16:37:14,661 - INFO: Door is closed
+2023-01-06 16:38:15,464 - DEBUG: Door will open at 2023-01-07 08:26:00+00:00 UTC
+2023-01-06 16:38:15,470 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-07 16:38:00+00:00 UTC
+2023-01-07 07:56:35,913 - WARNING: Opening door
+2023-01-07 07:57:39,027 - DEBUG: Door will open again at 2023-01-08 08:26:00+00:00 UTC
+2023-01-07 07:57:39,034 - DEBUG: Door will close 30 minutes after sunset at 2023-01-07 16:38:00+00:00 UTC
+2023-01-07 16:38:23,231 - WARNING: Closing door
+2023-01-07 16:38:25,679 - INFO: Door is closed
+2023-01-07 16:39:26,340 - DEBUG: Door will open at 2023-01-08 08:26:00+00:00 UTC
+2023-01-07 16:39:26,346 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-08 16:39:00+00:00 UTC
+2023-01-08 07:56:46,945 - WARNING: Opening door
+2023-01-08 07:57:50,054 - DEBUG: Door will open again at 2023-01-09 08:25:00+00:00 UTC
+2023-01-08 07:57:50,060 - DEBUG: Door will close 30 minutes after sunset at 2023-01-08 16:39:00+00:00 UTC
+2023-01-08 16:39:34,384 - WARNING: Closing door
+2023-01-08 16:39:36,604 - INFO: Door is closed
+2023-01-08 16:40:37,494 - DEBUG: Door will open at 2023-01-09 08:25:00+00:00 UTC
+2023-01-08 16:40:37,500 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-09 16:41:00+00:00 UTC
+2023-01-09 07:55:57,665 - WARNING: Opening door
+2023-01-09 07:57:00,754 - DEBUG: Door will open again at 2023-01-10 08:24:00+00:00 UTC
+2023-01-09 07:57:00,760 - DEBUG: Door will close 30 minutes after sunset at 2023-01-09 16:41:00+00:00 UTC
+2023-01-09 16:41:45,452 - WARNING: Closing door
+2023-01-09 16:41:47,819 - INFO: Door is closed
+2023-01-09 16:42:48,551 - DEBUG: Door will open at 2023-01-10 08:24:00+00:00 UTC
+2023-01-09 16:42:48,557 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-10 16:42:00+00:00 UTC
+2023-01-10 07:54:08,374 - WARNING: Opening door
+2023-01-10 07:55:11,493 - DEBUG: Door will open again at 2023-01-11 08:24:00+00:00 UTC
+2023-01-10 07:55:11,500 - DEBUG: Door will close 30 minutes after sunset at 2023-01-10 16:42:00+00:00 UTC
+2023-01-10 16:42:56,475 - WARNING: Closing door
+2023-01-10 16:42:58,814 - INFO: Door is closed
+2023-01-10 16:43:59,550 - DEBUG: Door will open at 2023-01-11 08:24:00+00:00 UTC
+2023-01-10 16:43:59,556 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-11 16:44:00+00:00 UTC
+2023-01-11 07:54:19,453 - WARNING: Opening door
+2023-01-11 07:54:22,439 - INFO: Door is open
+2023-01-11 07:55:22,524 - DEBUG: Door will open again at 2023-01-12 08:23:00+00:00 UTC
+2023-01-11 07:55:22,530 - DEBUG: Door will close 30 minutes after sunset at 2023-01-11 16:44:00+00:00 UTC
+2023-01-11 16:44:07,360 - WARNING: Closing door
+2023-01-11 16:44:09,818 - INFO: Door is closed
+2023-01-11 16:45:10,459 - DEBUG: Door will open at 2023-01-12 08:23:00+00:00 UTC
+2023-01-11 16:45:10,465 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-12 16:45:00+00:00 UTC
+2023-01-11 21:19:53,653 - INFO: Coop started
+2023-01-11 21:19:53,663 - INFO: The UTC time is: 2023-01-11 21:19:53.640192+00:00
+2023-01-11 21:19:53,667 - INFO: Door was already closed
+2023-01-11 21:20:46,906 - INFO: Coop started
+2023-01-11 21:20:46,914 - INFO: The UTC time is: 2023-01-11 21:20:46.893051+00:00
+2023-01-11 21:20:46,928 - INFO: Door was already closed
+2023-01-11 21:23:35,843 - INFO: Coop started
+2023-01-11 21:23:35,854 - INFO: The UTC time is: 2023-01-11 21:23:35.826206+00:00
+2023-01-11 21:23:35,866 - DEBUG: Door will open again at 2023-01-12 08:23:00+00:00 UTC
+2023-01-11 21:24:28,079 - INFO: Coop started
+2023-01-11 21:24:28,094 - INFO: The UTC time is: 2023-01-11 21:24:28.066423+00:00
+2023-01-11 21:24:28,098 - INFO: Door was already closed
+2023-01-12 07:53:20,186 - WARNING: Opening door
+2023-01-12 07:54:23,296 - DEBUG: Door will open again at 2023-01-13 08:22:00+00:00 UTC
+2023-01-12 07:54:23,302 - DEBUG: Door will close 30 minutes after sunset at 2023-01-12 16:45:00+00:00 UTC
+2023-01-12 16:45:05,977 - WARNING: Closing door
+2023-01-12 16:45:08,423 - INFO: Door is closed
+2023-01-12 16:46:09,094 - DEBUG: Door will open at 2023-01-13 08:22:00+00:00 UTC
+2023-01-12 16:46:09,101 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-13 16:47:00+00:00 UTC
+2023-01-13 07:52:25,153 - WARNING: Opening door
+2023-01-13 07:52:28,111 - INFO: Door is open
+2023-01-13 07:53:28,259 - DEBUG: Door will open again at 2023-01-14 08:21:00+00:00 UTC
+2023-01-13 07:53:28,262 - DEBUG: Door will close 30 minutes after sunset at 2023-01-13 16:47:00+00:00 UTC
+2023-01-13 12:35:28,809 - DEBUG: Door Manually Closed
+2023-01-13 12:35:31,225 - INFO: Door is closed
+2023-01-13 12:35:34,863 - DEBUG: Door Manually Opened
+2023-01-13 12:35:37,807 - INFO: Door is open
+2023-01-13 16:47:15,256 - WARNING: Closing door
+2023-01-13 16:47:17,713 - INFO: Door is closed
+2023-01-13 16:48:18,369 - DEBUG: Door will open at 2023-01-14 08:21:00+00:00 UTC
+2023-01-13 16:48:18,377 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-14 16:49:00+00:00 UTC
+2023-01-14 07:51:33,870 - WARNING: Opening door
+2023-01-14 07:52:36,994 - DEBUG: Door will open again at 2023-01-15 08:20:00+00:00 UTC
+2023-01-14 07:52:37,000 - DEBUG: Door will close 30 minutes after sunset at 2023-01-14 16:49:00+00:00 UTC
+2023-01-14 16:49:20,619 - WARNING: Closing door
+2023-01-14 16:49:23,142 - INFO: Door is closed
+2023-01-14 16:50:23,742 - DEBUG: Door will open at 2023-01-15 08:20:00+00:00 UTC
+2023-01-14 16:50:23,746 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-15 16:50:00+00:00 UTC
+2023-01-15 07:50:39,279 - WARNING: Opening door
+2023-01-15 07:50:42,287 - INFO: Door is open
+2023-01-15 07:51:42,363 - DEBUG: Door will open again at 2023-01-16 08:19:00+00:00 UTC
+2023-01-15 07:51:42,370 - DEBUG: Door will close 30 minutes after sunset at 2023-01-15 16:50:00+00:00 UTC
+2023-01-15 16:50:26,251 - WARNING: Closing door
+2023-01-15 16:50:28,733 - INFO: Door is closed
+2023-01-15 16:51:29,359 - DEBUG: Door will open at 2023-01-16 08:19:00+00:00 UTC
+2023-01-15 16:51:29,364 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-16 16:52:00+00:00 UTC
+2023-01-16 07:49:45,113 - WARNING: Opening door
+2023-01-16 07:50:48,244 - DEBUG: Door will open again at 2023-01-17 08:18:00+00:00 UTC
+2023-01-16 07:50:48,251 - DEBUG: Door will close 30 minutes after sunset at 2023-01-16 16:52:00+00:00 UTC
+2023-01-16 16:52:32,319 - WARNING: Closing door
+2023-01-16 16:52:34,771 - INFO: Door is closed
+2023-01-16 16:53:35,416 - DEBUG: Door will open at 2023-01-17 08:18:00+00:00 UTC
+2023-01-16 16:53:35,423 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-17 16:54:00+00:00 UTC
+2023-01-17 07:48:50,491 - WARNING: Opening door
+2023-01-17 07:49:53,624 - DEBUG: Door will open again at 2023-01-18 08:17:00+00:00 UTC
+2023-01-17 07:49:53,630 - DEBUG: Door will close 30 minutes after sunset at 2023-01-17 16:54:00+00:00 UTC
+2023-01-17 16:54:37,851 - WARNING: Closing door
+2023-01-17 16:54:40,352 - INFO: Door is closed
+2023-01-17 16:55:40,913 - DEBUG: Door will open at 2023-01-18 08:17:00+00:00 UTC
+2023-01-17 16:55:40,920 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-18 16:55:00+00:00 UTC
+2023-01-18 07:47:55,548 - WARNING: Opening door
+2023-01-18 07:47:58,503 - INFO: Door is open
+2023-01-18 07:48:58,674 - DEBUG: Door will open again at 2023-01-19 08:16:00+00:00 UTC
+2023-01-18 07:48:58,680 - DEBUG: Door will close 30 minutes after sunset at 2023-01-18 16:55:00+00:00 UTC
+2023-01-18 16:55:42,683 - WARNING: Closing door
+2023-01-18 16:56:45,804 - DEBUG: Door will open at 2023-01-19 08:16:00+00:00 UTC
+2023-01-18 16:56:45,813 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-19 16:57:00+00:00 UTC
+2023-01-19 07:46:59,366 - WARNING: Opening door
+2023-01-19 07:46:59,380 - INFO: Door is open
+2023-01-19 07:48:00,407 - DEBUG: Door will open again at 2023-01-20 08:15:00+00:00 UTC
+2023-01-19 07:48:00,413 - DEBUG: Door will close 30 minutes after sunset at 2023-01-19 16:57:00+00:00 UTC
+2023-01-19 16:57:44,115 - WARNING: Closing door
+2023-01-19 16:57:46,663 - INFO: Door is closed
+2023-01-19 16:58:47,203 - DEBUG: Door will open at 2023-01-20 08:15:00+00:00 UTC
+2023-01-19 16:58:47,209 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-20 16:59:00+00:00 UTC
+2023-01-20 07:45:01,947 - WARNING: Opening door
+2023-01-20 07:46:05,074 - DEBUG: Door will open again at 2023-01-21 08:14:00+00:00 UTC
+2023-01-20 07:46:05,082 - DEBUG: Door will close 30 minutes after sunset at 2023-01-20 16:59:00+00:00 UTC
+2023-01-20 16:59:49,674 - WARNING: Closing door
+2023-01-20 16:59:52,206 - INFO: Door is closed
+2023-01-20 17:00:52,764 - DEBUG: Door will open at 2023-01-21 08:14:00+00:00 UTC
+2023-01-20 17:00:52,775 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-21 17:01:00+00:00 UTC
+2023-01-21 07:44:07,551 - WARNING: Opening door
+2023-01-21 07:45:10,673 - DEBUG: Door will open again at 2023-01-22 08:12:00+00:00 UTC
+2023-01-21 07:45:10,680 - DEBUG: Door will close 30 minutes after sunset at 2023-01-21 17:01:00+00:00 UTC
+2023-01-21 12:34:54,446 - DEBUG: Door Manually Closed
+2023-01-21 12:35:00,508 - DEBUG: Door Manually Opened
+2023-01-21 12:35:03,565 - DEBUG: Door Manually Opened
+2023-01-21 12:35:04,404 - INFO: Door is open
+2023-01-21 12:35:39,679 - DEBUG: Door Manually Closed
+2023-01-21 12:35:42,466 - INFO: Door is closed
+2023-01-21 12:35:43,733 - DEBUG: Door Manually Opened
+2023-01-21 12:35:47,786 - DEBUG: Door Manually Closed
+2023-01-21 12:35:51,851 - DEBUG: Door Manually Closed
+2023-01-21 12:35:54,471 - INFO: Door is closed
+2023-01-21 12:35:55,893 - DEBUG: Door Manually Opened
+2023-01-21 12:35:58,945 - DEBUG: Door Manually Opened
+2023-01-21 17:01:12,581 - WARNING: Closing door
+2023-01-21 17:01:15,198 - INFO: Door is closed
+2023-01-21 17:02:15,654 - DEBUG: Door will open at 2023-01-22 08:12:00+00:00 UTC
+2023-01-21 17:02:15,660 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-22 17:03:00+00:00 UTC
+2023-01-22 07:42:28,815 - WARNING: Opening door
+2023-01-22 07:43:31,944 - DEBUG: Door will open again at 2023-01-23 08:11:00+00:00 UTC
+2023-01-22 07:43:31,953 - DEBUG: Door will close 30 minutes after sunset at 2023-01-22 17:03:00+00:00 UTC
+2023-01-22 17:03:17,505 - WARNING: Closing door
+2023-01-22 17:03:19,932 - INFO: Door is closed
+2023-01-22 17:04:20,603 - DEBUG: Door will open at 2023-01-23 08:11:00+00:00 UTC
+2023-01-22 17:04:20,610 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-23 17:05:00+00:00 UTC
+2023-01-23 07:41:34,545 - WARNING: Opening door
+2023-01-23 07:42:37,657 - DEBUG: Door will open again at 2023-01-24 08:10:00+00:00 UTC
+2023-01-23 07:42:37,664 - DEBUG: Door will close 30 minutes after sunset at 2023-01-23 17:05:00+00:00 UTC
+2023-01-23 17:05:23,590 - WARNING: Closing door
+2023-01-23 17:05:26,046 - INFO: Door is closed
+2023-01-23 17:06:26,709 - DEBUG: Door will open at 2023-01-24 08:10:00+00:00 UTC
+2023-01-23 17:06:26,718 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-24 17:06:00+00:00 UTC
+2023-01-24 07:40:40,381 - WARNING: Opening door
+2023-01-24 07:41:43,483 - DEBUG: Door will open again at 2023-01-25 08:08:00+00:00 UTC
+2023-01-24 07:41:43,494 - DEBUG: Door will close 30 minutes after sunset at 2023-01-24 17:06:00+00:00 UTC
+2023-01-24 17:06:29,040 - WARNING: Closing door
+2023-01-24 17:06:31,532 - INFO: Door is closed
+2023-01-24 17:07:32,108 - DEBUG: Door will open at 2023-01-25 08:08:00+00:00 UTC
+2023-01-24 17:07:32,114 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-25 17:08:00+00:00 UTC
+2023-01-25 07:38:45,708 - WARNING: Opening door
+2023-01-25 07:39:48,836 - DEBUG: Door will open again at 2023-01-26 08:07:00+00:00 UTC
+2023-01-25 07:39:48,841 - DEBUG: Door will close 30 minutes after sunset at 2023-01-25 17:08:00+00:00 UTC
+2023-01-25 17:08:34,267 - WARNING: Closing door
+2023-01-25 17:08:36,750 - INFO: Door is closed
+2023-01-25 17:09:37,395 - DEBUG: Door will open at 2023-01-26 08:07:00+00:00 UTC
+2023-01-25 17:09:37,401 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-26 17:10:00+00:00 UTC
+2023-01-26 07:37:50,554 - WARNING: Opening door
+2023-01-26 07:38:53,684 - DEBUG: Door will open again at 2023-01-27 08:05:00+00:00 UTC
+2023-01-26 07:38:53,690 - DEBUG: Door will close 30 minutes after sunset at 2023-01-26 17:10:00+00:00 UTC
+2023-01-26 17:10:39,280 - WARNING: Closing door
+2023-01-26 17:10:41,791 - INFO: Door is closed
+2023-01-26 17:11:42,389 - DEBUG: Door will open at 2023-01-27 08:05:00+00:00 UTC
+2023-01-26 17:11:42,394 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-27 17:12:00+00:00 UTC
+2023-01-27 07:35:55,222 - WARNING: Opening door
+2023-01-27 07:36:58,354 - DEBUG: Door will open again at 2023-01-28 08:04:00+00:00 UTC
+2023-01-27 07:36:58,361 - DEBUG: Door will close 30 minutes after sunset at 2023-01-27 17:12:00+00:00 UTC
+2023-01-27 17:12:44,975 - WARNING: Closing door
+2023-01-27 17:12:47,449 - INFO: Door is closed
+2023-01-27 17:13:48,085 - DEBUG: Door will open at 2023-01-28 08:04:00+00:00 UTC
+2023-01-27 17:13:48,091 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-28 17:14:00+00:00 UTC
+2023-01-28 07:34:00,806 - WARNING: Opening door
+2023-01-28 07:35:03,874 - DEBUG: Door will open again at 2023-01-29 08:02:00+00:00 UTC
+2023-01-28 07:35:03,878 - DEBUG: Door will close 30 minutes after sunset at 2023-01-28 17:14:00+00:00 UTC
+2023-01-28 17:14:51,184 - WARNING: Closing door
+2023-01-28 17:14:53,616 - INFO: Door is closed
+2023-01-28 17:15:54,263 - DEBUG: Door will open at 2023-01-29 08:02:00+00:00 UTC
+2023-01-28 17:15:54,270 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-29 17:16:00+00:00 UTC
+2023-01-29 07:32:06,622 - WARNING: Opening door
+2023-01-29 07:33:09,723 - DEBUG: Door will open again at 2023-01-30 08:01:00+00:00 UTC
+2023-01-29 07:33:09,730 - DEBUG: Door will close 30 minutes after sunset at 2023-01-29 17:16:00+00:00 UTC
+2023-01-29 17:16:57,230 - WARNING: Closing door
+2023-01-29 17:16:59,704 - INFO: Door is closed
+2023-01-29 17:18:00,308 - DEBUG: Door will open at 2023-01-30 08:01:00+00:00 UTC
+2023-01-29 17:18:00,315 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-30 17:18:00+00:00 UTC
+2023-01-30 07:31:11,977 - WARNING: Opening door
+2023-01-30 07:32:15,114 - DEBUG: Door will open again at 2023-01-31 07:59:00+00:00 UTC
+2023-01-30 07:32:15,122 - DEBUG: Door will close 30 minutes after sunset at 2023-01-30 17:18:00+00:00 UTC
+2023-01-30 17:18:03,020 - WARNING: Closing door
+2023-01-30 17:18:05,514 - INFO: Door is closed
+2023-01-30 17:19:06,129 - DEBUG: Door will open at 2023-01-31 07:59:00+00:00 UTC
+2023-01-30 17:19:06,139 - DEBUG: Door will close again 30 minutes after sunset at 2023-01-31 17:20:00+00:00 UTC
+2023-01-31 07:29:16,815 - WARNING: Opening door
+2023-01-31 07:30:19,944 - DEBUG: Door will open again at 2023-02-01 07:57:00+00:00 UTC
+2023-01-31 07:30:19,950 - DEBUG: Door will close 30 minutes after sunset at 2023-01-31 17:20:00+00:00 UTC
+2023-01-31 17:20:07,515 - WARNING: Closing door
+2023-01-31 17:20:10,183 - INFO: Door is closed
+2023-01-31 17:21:10,642 - DEBUG: Door will open at 2023-02-01 07:57:00+00:00 UTC
+2023-01-31 17:21:10,646 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-01 17:22:00+00:00 UTC
+2023-02-01 07:27:22,222 - WARNING: Opening door
+2023-02-01 07:28:25,291 - DEBUG: Door will open again at 2023-02-02 07:56:00+00:00 UTC
+2023-02-01 07:28:25,299 - DEBUG: Door will close 30 minutes after sunset at 2023-02-01 17:22:00+00:00 UTC
+2023-02-01 17:22:13,581 - WARNING: Closing door
+2023-02-01 17:22:16,122 - INFO: Door is closed
+2023-02-01 17:23:16,684 - DEBUG: Door will open at 2023-02-02 07:56:00+00:00 UTC
+2023-02-01 17:23:16,694 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-02 17:24:00+00:00 UTC
+2023-02-02 07:26:27,826 - WARNING: Opening door
+2023-02-02 07:27:30,911 - DEBUG: Door will open again at 2023-02-03 07:54:00+00:00 UTC
+2023-02-02 07:27:30,917 - DEBUG: Door will close 30 minutes after sunset at 2023-02-02 17:24:00+00:00 UTC
+2023-02-02 17:24:19,355 - WARNING: Closing door
+2023-02-02 17:24:21,851 - INFO: Door is closed
+2023-02-02 17:25:22,479 - DEBUG: Door will open at 2023-02-03 07:54:00+00:00 UTC
+2023-02-02 17:25:22,485 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-03 17:26:00+00:00 UTC
+2023-02-03 07:24:32,885 - WARNING: Opening door
+2023-02-03 07:25:36,005 - DEBUG: Door will open again at 2023-02-04 07:52:00+00:00 UTC
+2023-02-03 07:25:36,011 - DEBUG: Door will close 30 minutes after sunset at 2023-02-03 17:26:00+00:00 UTC
+2023-02-03 17:26:24,802 - WARNING: Closing door
+2023-02-03 17:26:27,348 - INFO: Door is closed
+2023-02-03 17:27:27,913 - DEBUG: Door will open at 2023-02-04 07:52:00+00:00 UTC
+2023-02-03 17:27:27,920 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-04 17:28:00+00:00 UTC
+2023-02-04 07:22:37,952 - WARNING: Opening door
+2023-02-04 07:23:41,052 - DEBUG: Door will open again at 2023-02-05 07:50:00+00:00 UTC
+2023-02-04 07:23:41,058 - DEBUG: Door will close 30 minutes after sunset at 2023-02-04 17:28:00+00:00 UTC
+2023-02-04 17:28:30,273 - WARNING: Closing door
+2023-02-04 17:28:32,764 - INFO: Door is closed
+2023-02-04 17:29:33,389 - DEBUG: Door will open at 2023-02-05 07:50:00+00:00 UTC
+2023-02-04 17:29:33,396 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-05 17:30:00+00:00 UTC
+2023-02-05 07:20:43,620 - WARNING: Opening door
+2023-02-05 07:21:46,738 - DEBUG: Door will open again at 2023-02-06 07:49:00+00:00 UTC
+2023-02-05 07:21:46,744 - DEBUG: Door will close 30 minutes after sunset at 2023-02-05 17:30:00+00:00 UTC
+2023-02-05 17:30:35,817 - WARNING: Closing door
+2023-02-05 17:30:38,320 - INFO: Door is closed
+2023-02-05 17:31:38,893 - DEBUG: Door will open at 2023-02-06 07:49:00+00:00 UTC
+2023-02-05 17:31:38,901 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-06 17:32:00+00:00 UTC
+2023-02-06 07:19:48,266 - WARNING: Opening door
+2023-02-06 07:20:51,383 - DEBUG: Door will open again at 2023-02-07 07:47:00+00:00 UTC
+2023-02-06 07:20:51,390 - DEBUG: Door will close 30 minutes after sunset at 2023-02-06 17:32:00+00:00 UTC
+2023-02-06 17:32:41,124 - WARNING: Closing door
+2023-02-06 17:33:44,233 - DEBUG: Door will open at 2023-02-07 07:47:00+00:00 UTC
+2023-02-06 17:33:44,239 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-07 17:34:00+00:00 UTC
+2023-02-07 07:17:53,130 - WARNING: Opening door
+2023-02-07 07:18:56,221 - DEBUG: Door will open again at 2023-02-08 07:45:00+00:00 UTC
+2023-02-07 07:18:56,241 - DEBUG: Door will close 30 minutes after sunset at 2023-02-07 17:34:00+00:00 UTC
+2023-02-07 08:55:46,141 - DEBUG: Door Manually Opened
+2023-02-07 08:55:49,195 - DEBUG: Door Manually Opened
+2023-02-07 08:55:50,414 - INFO: Door is open
+2023-02-07 08:55:59,257 - DEBUG: Door Manually Closed
+2023-02-07 08:56:09,324 - DEBUG: Door Manually Opened
+2023-02-07 08:56:13,385 - DEBUG: Door Manually Opened
+2023-02-07 08:56:14,191 - INFO: Door is open
+2023-02-07 08:56:39,451 - DEBUG: Door Manually Closed
+2023-02-07 08:56:42,020 - INFO: Door is closed
+2023-02-07 08:56:43,500 - DEBUG: Door Manually Opened
+2023-02-07 17:34:57,924 - WARNING: Closing door
+2023-02-07 17:35:00,363 - INFO: Door is closed
+2023-02-07 17:36:01,013 - DEBUG: Door will open at 2023-02-08 07:45:00+00:00 UTC
+2023-02-07 17:36:01,017 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-08 17:36:00+00:00 UTC
+2023-02-08 07:15:09,830 - WARNING: Opening door
+2023-02-08 07:16:12,902 - DEBUG: Door will open again at 2023-02-09 07:43:00+00:00 UTC
+2023-02-08 07:16:12,906 - DEBUG: Door will close 30 minutes after sunset at 2023-02-08 17:36:00+00:00 UTC
+2023-02-08 07:16:47,955 - DEBUG: Door Manually Opened
+2023-02-08 07:16:48,254 - INFO: Door is open
+2023-02-08 07:16:49,977 - DEBUG: Door Manually Closed
+2023-02-08 07:16:54,039 - DEBUG: Door Manually Closed
+2023-02-08 07:16:58,107 - DEBUG: Door Manually Closed
+2023-02-08 07:17:11,176 - DEBUG: Door Manually Closed
+2023-02-08 07:17:15,238 - DEBUG: Door Manually Closed
+2023-02-08 17:36:13,188 - WARNING: Closing door
+2023-02-08 17:37:16,323 - DEBUG: Door will open at 2023-02-09 07:43:00+00:00 UTC
+2023-02-08 17:37:16,328 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-09 17:38:00+00:00 UTC
+2023-02-09 07:13:24,978 - WARNING: Opening door
+2023-02-09 07:13:24,989 - INFO: Door is open
+2023-02-09 07:14:26,013 - DEBUG: Door will open again at 2023-02-10 07:41:00+00:00 UTC
+2023-02-09 07:14:26,024 - DEBUG: Door will close 30 minutes after sunset at 2023-02-09 17:38:00+00:00 UTC
+2023-02-09 17:38:16,075 - WARNING: Closing door
+2023-02-09 17:39:19,186 - DEBUG: Door will open at 2023-02-10 07:41:00+00:00 UTC
+2023-02-09 17:39:19,193 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-10 17:40:00+00:00 UTC
+2023-02-10 07:11:26,354 - WARNING: Opening door
+2023-02-10 07:11:26,374 - INFO: Door is open
+2023-02-10 07:12:27,426 - DEBUG: Door will open again at 2023-02-11 07:39:00+00:00 UTC
+2023-02-10 07:12:27,432 - DEBUG: Door will close 30 minutes after sunset at 2023-02-10 17:40:00+00:00 UTC
+2023-02-10 17:40:18,782 - WARNING: Closing door
+2023-02-10 17:41:22,243 - DEBUG: Door will open at 2023-02-11 07:39:00+00:00 UTC
+2023-02-10 17:41:22,246 - DEBUG: Door will close again 30 minutes after sunset at 2023-02-11 17:42:00+00:00 UTC
+2023-02-10 18:06:32,423 - DEBUG: Door Manually Opened
+2023-02-10 18:06:32,430 - INFO: Door is open
+2023-02-10 18:06:33,435 - DEBUG: Door Manually Opened
+2023-02-10 18:06:33,440 - INFO: Door is open
+2023-02-10 18:06:34,445 - DEBUG: Door Manually Opened
+2023-02-10 18:06:34,452 - INFO: Door is open
+2023-02-10 18:06:35,459 - DEBUG: Door Manually Opened
+2023-02-10 18:06:35,465 - INFO: Door is open
+2023-02-10 18:06:36,470 - DEBUG: Door Manually Opened
+2023-02-10 18:06:36,476 - INFO: Door is open
+2023-02-10 18:06:37,481 - DEBUG: Door Manually Opened
+2023-02-10 18:06:37,496 - INFO: Door is open
+2023-02-10 18:06:38,497 - DEBUG: Door Manually Opened
+2023-02-10 18:06:38,501 - INFO: Door is open
+2023-02-10 18:06:39,506 - DEBUG: Door Manually Opened
+2023-02-10 18:06:39,513 - INFO: Door is open
+2023-02-10 18:06:40,517 - DEBUG: Door Manually Opened
+2023-02-10 18:06:40,523 - INFO: Door is open
+2023-02-10 18:06:41,529 - DEBUG: Door Manually Opened
+2023-02-10 18:06:41,532 - INFO: Door is open
+2023-02-10 18:06:42,541 - DEBUG: Door Manually Opened
+2023-02-10 18:06:42,552 - INFO: Door is open
+2023-02-10 18:06:43,560 - DEBUG: Door Manually Opened
+2023-02-10 18:06:43,567 - INFO: Door is open
+2023-02-10 18:06:44,575 - DEBUG: Door Manually Opened
+2023-02-10 18:06:44,581 - INFO: Door is open
+2023-02-10 18:06:45,585 - DEBUG: Door Manually Opened
+2023-02-10 18:06:45,591 - INFO: Door is open
+2023-02-10 18:06:46,598 - DEBUG: Door Manually Opened
+2023-02-10 18:06:46,606 - INFO: Door is open
+2023-02-10 18:06:47,614 - DEBUG: Door Manually Opened
+2023-02-10 18:06:47,627 - INFO: Door is open
+2023-02-10 18:06:48,629 - DEBUG: Door Manually Opened
+2023-02-10 18:06:48,635 - INFO: Door is open
+2023-02-10 18:06:49,640 - DEBUG: Door Manually Opened
+2023-02-10 18:06:49,646 - INFO: Door is open
+2023-02-10 18:06:50,653 - DEBUG: Door Manually Opened
+2023-02-10 18:06:50,660 - INFO: Door is open
+2023-02-10 18:06:51,668 - DEBUG: Door Manually Opened
+2023-02-10 18:06:51,674 - INFO: Door is open
+2023-02-10 18:07:36,805 - INFO: Coop started
+2023-02-10 18:07:36,814 - INFO: The UTC time is: 2023-02-10 18:07:36.789875+00:00
+2023-02-10 18:07:39,879 - WARNING: Door was open at startup while it should have been closed
+2023-02-10 18:09:19,014 - DEBUG: Door Manually Opened
+2023-02-10 18:09:19,018 - INFO: Door is open
+2023-02-10 18:09:20,025 - DEBUG: Door Manually Opened
+2023-02-10 18:09:20,029 - INFO: Door is open
+2023-02-10 18:09:21,031 - DEBUG: Door Manually Opened
+2023-02-10 18:09:21,036 - INFO: Door is open
+2023-02-10 18:09:22,041 - DEBUG: Door Manually Opened
+2023-02-10 18:09:22,054 - INFO: Door is open
+2023-02-10 18:09:23,046 - DEBUG: Door Manually Opened
+2023-02-10 18:09:23,052 - INFO: Door is open
+2023-02-10 18:09:24,057 - DEBUG: Door Manually Opened
+2023-02-10 18:09:24,074 - INFO: Door is open
+2023-02-10 18:09:57,421 - INFO: Coop started
+2023-02-10 18:09:57,467 - INFO: The UTC time is: 2023-02-10 18:09:57.371087+00:00
+2023-02-10 18:10:00,494 - ERROR: ERROR, closing door took too long
+2023-02-10 18:10:00,605 - WARNING: Door was open at startup while it should have been closed

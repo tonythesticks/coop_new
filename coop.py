@@ -112,7 +112,7 @@ def open_door():
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_open):
             motor_stop()
-            #logging.error("ERROR, opening door took too long")
+            logging.error("ERROR, opening door took too long")
             stop_threads = True
             t1.join()
             status_error()
@@ -139,7 +139,7 @@ def close_door():
             break
         elif datetime.now() > starttime + timedelta(milliseconds=doortime_close):
             motor_stop()
-            #logging.error("ERROR, closing door took too long")
+            logging.error("ERROR, closing door took too long")
             stop_threads = True
             t1.join()
             status_error()
@@ -207,7 +207,7 @@ def door():
         open_door()
         time.sleep(60)
 #TODO: Fix this, this should prevent the open_door() to run multiple times which in turn should prevent the motor burning for lack of a topsensor.
-        logging.debug("Door will open again at %s UTC", next_open)
+        logging.debug("Door will open again at %s UTC", opentimetomorrow)
         logging.debug("Door will close %s minutes after sunset at %s UTC", offset, next_close)
         main_loop()
     elif closetime <= now <= closetime + timedelta(minutes=1):
@@ -219,10 +219,10 @@ def door():
         main_loop()
     elif GPIO.input(BottomSensor) == False and (closetimeyesterday < now < opentime or closetime < now < opentimetomorrow):
         status_ok()
-        #logging.debug("DoorClosedCheck: OK")
+        logging.debug("DoorClosedCheck: OK")
     elif opentime < now < closetime and GPIO.input(TopSensor) == False:
         status_ok()
-        #logging.debug("DoorOpenCheck: OK")
+        logging.debug("DoorOpenCheck: OK")
 
     
 def main_loop():
